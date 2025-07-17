@@ -1,0 +1,4 @@
+1. Homepage: Searchbar in Hero section 
+    The below is class name.
+    "flex items-center justify-between w-[100%] lg:w-[500px] h-[51px] lg:h-[69px] bg-white border border-[#E0E0E0] rounded-[50px] pl-[16px] pr-[4px] py-[4px] gap-2 shadow-[0_8px_32px_0_rgba(62,35,158,0.15)] mb-0 lg:mb-6"
+2. 

@@ -110,7 +110,7 @@ const Navbar = ({ onHomeClick, onServicesClick, onRatesClick, onContactClick, on
               <button className="bg-white text-black rounded-full lg:min-w-[79px] lg:min-h-[49px] xl:min-w-[89px] xl:min-h-[49px] lg:px-4 lg:py-3 xl:px-5 xl:py-4 lg:text-base xl:text-base transition">Sign In</button>
             </Link>
             <button
-              className="bg-[#654FB1] hover:bg-[#5139A8] text-white rounded-full md:w-[140px] xl:min-w-[191px] min-h-[49px] lg:px-[4] lg-py-[3] xl:px-5 xl:py-4  lg:text-xs xl:text-base font-medium transition"
+              className="bg-[#654FB1] hover:bg-[#5139A8] text-white rounded-full md:w-[140px] xl:min-w-[191px] min-h-[49px] lg:px-[1] lg-py-[1] xl:px-2 xl:py-2  lg:text-xs xl:text-base font-medium transition"
               onClick={() => navigate('/signup')}
             >
               Create FREE Account

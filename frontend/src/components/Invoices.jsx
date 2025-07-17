@@ -106,30 +106,39 @@ export default function Invoices() {
           {/* Mobile Card Layout */}
           <div className="lg:hidden space-y-4">
             {invoices.map((inv, idx) => (
-              <div key={idx} className="border border-[#F0F0F0] rounded-lg p-4 bg-white flex flex-col gap-2">
-                <div className="flex items-center justify-between mb-2">
-                  <div className="font-semibold text-base text-[#1C1E40]">{inv.id}</div>
-                  <span className="px-3 py-1 rounded-full text-xs font-medium" style={{ color: inv.dueColor === '#505050' ? '#505050' : inv.dueColor, background: inv.dueColor === '#505050' ? '#F3EDFF' : inv.dueColor }}>{inv.due}</span>
+              <div key={idx} className="border border-[#EAEAEA] rounded-xl p-4 bg-white mb-2">
+                <div className="flex justify-between mb-2">
+                  <span className="text-[#A0A0A0] font-medium">Invoice №</span>
+                  <span className="font-bold text-[#1C1E40]">{inv.id}</span>
                 </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-[#505050]">Client</span>
+                <div className="flex justify-between mb-2">
+                  <span className="text-[#A0A0A0] font-medium">Client</span>
                   <span className="text-[#1C1E40]">{inv.client}</span>
                 </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-[#505050]">Date</span>
+                <div className="flex justify-between mb-2">
+                  <span className="text-[#A0A0A0] font-medium">Date</span>
                   <span className="text-[#1C1E40]">{inv.date}</span>
                 </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-[#505050]">Status</span>
+                <div className="flex justify-between mb-2">
+                  <span className="text-[#A0A0A0] font-medium">Due Date</span>
+                  <span className="text-[#1C1E40]">{inv.due}</span>
+                </div>
+                <div className="flex justify-between mb-2">
+                  <span className="text-[#A0A0A0] font-medium">Status</span>
                   <span className="text-[#1C1E40]">{inv.status}</span>
                 </div>
-                <div className="flex justify-between text-sm">
-                  <span className="text-[#505050]">Total</span>
-                  <span className="text-sm font-semibold text-[#1C1E40]">{inv.total}</span>
+                <div className="flex justify-between">
+                  <span className="text-[#A0A0A0] font-medium">Total</span>
+                  <span className="font-bold text-[#1C1E40]">{inv.total}</span>
                 </div>
-                <button className="w-full mt-2 px-4 py-2 rounded-full bg-[#9664E6] text-white font-medium text-sm">Details</button>
               </div>
             ))}
+            {/* Pagination dots */}
+            <div className="flex justify-center mt-2">
+              <span className="w-2 h-2 rounded-full bg-[#5E30CC] mx-1"></span>
+              <span className="w-2 h-2 rounded-full bg-[#EAEAEA] mx-1"></span>
+              <span className="w-2 h-2 rounded-full bg-[#EAEAEA] mx-1"></span>
+            </div>
           </div>
         </div>
       </main>

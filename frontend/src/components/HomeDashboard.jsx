@@ -51,13 +51,21 @@ const CustomToggle = ({ checked, onChange }) => (
 
 const HomeDashboard = () => {
   const [toggleStates, setToggleStates] = useState(domains.map(d => d.autoRenew));
+  const [searchValue, setSearchValue] = useState("");
+  const [showResults, setShowResults] = useState(false);
+  const isUnavailable = searchValue === "example.com";
 
   const handleToggle = idx => {
     setToggleStates(states => states.map((v, i) => (i === idx ? !v : v)));
   };
 
+  const handleSearchChange = (e) => {
+    setSearchValue(e.target.value);
+    setShowResults(!!e.target.value);
+  };
+
   return (
-    <div className="min-h-screen bg-[#F7F7FC]">
+    <div className="mihttps://www.figma.com/design/yM1D0rkTcK5t26AIl3GvKD/Nameword_1-with-improvements--Copy-?node-id=8366-267773&t=ZKSp0Hx47E11vjYz-4n-h-screen bg-[#F7F7FC]">
       <NewNavbar />
       
       {/* Container with responsive widths */}
@@ -158,8 +166,10 @@ const HomeDashboard = () => {
             </span>
             <input 
               type="text" 
-              placeholder="Search" 
-              className="w-full bg-transparent outline-none text-base text-[#1C1E40] h-[40px]" 
+              placeholder="Search domain" 
+              className="w-full bg-transparent outline-none text-base text-[#1C1E40] h-[40px]"
+              value={searchValue}
+              onChange={handleSearchChange}
             />
           </div>
           <div className="flex items-center gap-4 ml-0 sm:ml-2">
@@ -167,6 +177,57 @@ const HomeDashboard = () => {
             <CustomToggle checked={true} onChange={() => {}} />
             <span className="text-[#1C1E40] text-base font-bold ml-2">Transfer</span>
           </div>
+
+          {/* Search Results Section */}
+          {showResults && (
+            <div className="mt-8 w-full">
+              <div className="flex flex-col gap-2">
+                <div className="flex items-center gap-2">
+                  <span className="text-[#1C1E40] text-lg font-semibold">{searchValue}</span>
+                  {isUnavailable && (
+                    <span className="text-[#FC5585] text-sm font-medium ml-2">This domain is not available.</span>
+                  )}
+                </div>
+                <div className="flex items-center gap-2 text-[#A0A0A0] text-xs">
+                  Prices Excl. VAT. <a href="#" className="text-[#0987FF] underline ml-1">Edit</a>
+                </div>
+              </div>
+              <div className="mt-6">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="text-[#1C1E40] text-base font-bold">Our selection</span>
+                  <button className="px-6 py-2 bg-[#5E30CC] text-white rounded-full font-medium text-base">My selection</button>
+                </div>
+                <div className="overflow-x-auto">
+                  <table className="w-full text-left rounded-[16px]">
+                    <thead>
+                      <tr className="text-black text-sm font-semibold bg-[#F7F7FC]">
+                        <th className="px-4 py-3">Domain name</th>
+                        <th className="px-4 py-3">Period</th>
+                        <th className="px-4 py-3">Price</th>
+                        <th className="px-4 py-3">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {[1,2,3].map((i) => (
+                        <tr key={i} className="border-b border-[#EAEAEA]">
+                          <td className="px-4 py-3 text-[#1C1E40] font-medium">{searchValue}</td>
+                          <td className="px-4 py-3">
+                            <select className="bg-[#F7F7FC] border border-[#EAEAEA] rounded-full px-4 py-2 text-sm text-black">
+                              <option>1 year</option>
+                            </select>
+                          </td>
+                          <td className="px-4 py-3 text-[#1C1E40] font-medium">€36.00 /year</td>
+                          <td className="px-4 py-3">
+                            <button className="px-6 py-2 border border-[#06C78F] text-[#06C78F] rounded-full font-medium text-base bg-white hover:bg-[#F7F7FC] transition">Register</button>
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         {/* Domain List Section */}
@@ -212,7 +273,7 @@ const HomeDashboard = () => {
           <div className="hidden sm:block overflow-x-auto">
             <table className="w-full text-left">
               <thead>
-                <tr className="text-[#A0A0A0] text-sm sm:text-base font-medium" style={{height: 64}}>
+                <tr className="text-black text-sm sm:text-base font-semibold" style={{height: 64}}>
                   <th className="px-4 sm:px-6 py-2"><input type="checkbox" /></th>
                   <th className="px-4 sm:px-6 py-2">Domain name</th>
                   <th className="px-4 sm:px-6 py-2">Status</th>

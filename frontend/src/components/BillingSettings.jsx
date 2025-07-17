@@ -8,14 +8,14 @@ export default function BillingSettings() {
     <div className="min-h-screen bg-[#F7F7FC] relative">
       <NewNavbar activeSection="Wallet & Billing" />
       <Sidebar activeSection="Billing settings" />
-      <main className="pt-6 lg:ml-[250px] px-4 sm:px-6 lg:px-8 pb-10">
+      <main className="pt-6 lg:ml-[250px] px-4 sm:px-6 lg:px-8 pb-24 lg:pb-10">
         <div className="max-w-[1188px] mx-auto">
           {/* Title */}
           <h1 className="text-2xl sm:text-3xl lg:text-[28px] font-bold text-[#1C1E40] leading-tight lg:leading-[36px] mb-6 lg:mb-8">Billing settings</h1>
           {/* Cards Section */}
-          <div className="flex flex-col lg:flex-row gap-4 lg:gap-8 mb-6 lg:mb-10">
+          <div className="flex flex-col gap-4 lg:gap-8 mb-6 lg:mb-10">
             {/* User controls */}
-            <div className="w-full lg:w-1/2 rounded-[16px] bg-white p-4 sm:p-5 lg:p-6 flex flex-col justify-between shadow-sm">
+            <div className="w-full rounded-[16px] bg-white p-4 sm:p-5 lg:p-6 flex flex-col lg:flex-row justify-between shadow-sm">
               <div>
                 <div className="font-semibold text-lg text-[#1C1E40] mb-1">
                   User controls
@@ -23,10 +23,10 @@ export default function BillingSettings() {
                 </div>
                 <div className="text-[#505050] text-base mt-1">View & Manage Recurring Payments</div>
               </div>
-              <button className="w-full max-w-[160px] h-[40px] rounded-[20px] bg-[#F3EDFF] text-[#5E30CC] font-bold text-base flex items-center justify-center mt-4">Manage</button>
+              <button className="w-full max-w-[160px] h-[40px] rounded-[20px] bg-[#9664E6] text-white font-bold text-base flex items-center justify-center mt-4">Manage</button>
             </div>
             {/* Security */}
-            <div className="w-full lg:w-1/2 rounded-[16px] bg-white p-4 sm:p-5 lg:p-6 flex flex-col justify-between shadow-sm">
+            <div className="w-full rounded-[16px] bg-white p-4 sm:p-5 lg:p-6 flex flex-col lg:flex-row justify-between shadow-sm">
               <div>
                 <div className="font-semibold text-lg text-[#1C1E40] mb-1">
                   Security
@@ -34,7 +34,7 @@ export default function BillingSettings() {
                 </div>
                 <div className="text-[#505050] text-base mt-1">Set or Change Wallet PIN</div>
               </div>
-              <button className="w-full max-w-[160px] h-[40px] rounded-[20px] bg-[#F3EDFF] text-[#5E30CC] font-bold text-base flex items-center justify-center mt-4">Manage</button>
+              <button className="w-full max-w-[160px] h-[40px] rounded-[20px] bg-[#9664E6] text-white font-bold text-base flex items-center justify-center mt-4">Manage</button>
             </div>
           </div>
           {/* QR Section */}

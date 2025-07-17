@@ -27,6 +27,7 @@ import APIKeys from './components/APIKeys';
 import SharedHosting from './components/SharedHosting';
 import Mystore from './components/Mystore';
 import Nameservers from './components/Nameservers';
+import DomainOwnership from './components/DomainOwnership';
 
 const App = () => {
   return (
@@ -60,6 +61,7 @@ const App = () => {
           <Route path="/sharedhosting" element={<SharedHosting/>} />
           <Route path="/mystore" element={<Mystore/>} />
           <Route path="/nameservers" element={<Nameservers/>} />
+          <Route path="/ownership" element={<DomainOwnership/>} />
         </Routes>
       </main>
     </div>

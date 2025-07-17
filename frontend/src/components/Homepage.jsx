@@ -12,6 +12,8 @@ import mapImg from '../assets/map.png'
 import NImg from '../assets/N.png'
 import Navbar from './Navbar';
 import Footer from './Footer';
+import Testimonials from './Testimonials';
+import ClientsFeedback from './ClientsFeedback';
 
 const Homepage = () => {
   const navigate = useNavigate();
@@ -41,7 +43,7 @@ const Homepage = () => {
         <div className="w-[180px] lg:w-full flex flex-col items-center ">
           <h1 className="text-2xl md:text-6xl font-northuraLight text-center mb-8 leading-tight">Looking For The Perfect <br className="hidden md:block" />Domain?</h1>
           <p className="text-center text-sm font-korolevLight mb-8 mx-auto">Nameword is trusted by businesses and brands that value online credibility</p>
-          <div className="flex items-center justify-between lg:w-[100%] relative h-[51px] lg:h-[69px] bg-white border border-[#E0E0E0] rounded-[50px] pl-[16px] pr-[4px] py-[4px] gap-2 shadow-[0_8px_32px_0_rgba(62,35,158,0.15)] mb-0 lg:mb-6">
+          <div className="flex items-center justify-between w-[100%] lg:w-[500px] h-[51px] lg:h-[69px] bg-white border border-[#E0E0E0] rounded-[50px] pl-[16px] pr-[4px] py-[4px] gap-2 shadow-[0_8px_32px_0_rgba(62,35,158,0.15)] mb-0 lg:mb-6">
               {/* Search Icon */}
               <svg className="mr-1" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <circle cx="11" cy="11" r="8" stroke="#B0B0B0" strokeWidth="2"/>
@@ -66,7 +68,7 @@ const Homepage = () => {
               borderImageSlice: 1,
             }}
           >
-            <div className="w-full flex flex-col lg:grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-x-2 md:gap-x-6 gap-y-4 md:gap-y-8">
+            <div className="w-full flex flex-col lg:grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-x-2 md:gap-x-6 gap-y-4 md:gap-y-8 p-4 lg:p-0">
               {/* Get Domain Card (top left) */}
               <div className="relative flex flex-row items-center w-full lg:h-[151px] rounded-[15.94px] bg-[#23295A] px-1 py-2 lg:px-8 lg:py-6 overflow-hidden col-start-1 row-start-1">
                 <svg width="126" height="53" viewBox="0 0 126 53" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute right-0 bottom-0 z-0">
@@ -152,7 +154,7 @@ const Homepage = () => {
                 <span className="ml-3 text-white text-lg font-korolev">https://example</span>
               </div>
               {/* Carlos badge absolutely positioned outside the input card */}
-              <div className='hidden lg:block' style={{ position: 'absolute', width: '104px', height: '62px', top: '259px', left: '760px', opacity: 1, borderRadius: '24px', zIndex: 30 }}>
+              <div className='hidden xl:block' style={{ position: 'absolute', width: '104px', height: '62px', top: '259px', left: '760px', opacity: 1, borderRadius: '24px', zIndex: 30 }}>
                 <svg width="104" height="62" viewBox="0 0 104 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_d_8366_273900)">
                     <path d="M11.8924 23.7116L7.33378 7.72003C7.0984 6.89431 7.95602 6.18128 8.73584 6.55434L23.8385 13.7794C24.6416 14.1636 24.5812 15.3161 23.7425 15.6133L17.5312 17.8141C17.3056 17.894 17.1164 18.0513 16.9978 18.2576L13.7318 23.9363C13.2908 24.7031 12.1347 24.5618 11.8924 23.7116Z" fill="#039855"/>
@@ -233,7 +235,11 @@ const Homepage = () => {
             transform: 'translate(-50%, -50%)'
           }}
         />
-        
+          <div className='block md:hidden z-99'>
+            <svg width="134" height="23" viewBox="0 0 134 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M15.986 8.4V21.552C15.986 21.872 15.826 22.032 15.506 22.032H13.426C13.106 22.032 12.946 21.872 12.946 21.552V8.4C12.946 5.488 11.122 4.72 8.498 4.72H8.21C5.618 4.72 3.762 5.488 3.762 8.4V21.552C3.762 21.872 3.602 22.032 3.282 22.032H1.202C0.882 22.032 0.722 21.872 0.722 21.552V8.4C0.722 3.376 3.666 2 8.21 2H8.498C13.042 2 15.986 3.376 15.986 8.4ZM27.1 17.936V14.512H23.356C21.884 14.512 21.308 15.312 21.308 16.368V17.712C21.308 18.384 21.564 18.768 21.916 18.992C22.268 19.248 22.684 19.312 23.132 19.312H25.628C26.524 19.312 27.1 18.832 27.1 17.936ZM18.972 7.92V6.224C18.972 5.904 19.132 5.744 19.452 5.744H24.764C28.092 5.744 30.14 6.704 30.14 10.352V21.52C30.14 21.84 29.98 22 29.66 22H28.06L27.516 20.976C27.1 21.648 26.396 22 25.148 22H21.884C19.772 22 18.268 20.848 18.268 18.544V16.336C18.268 13.616 20.38 12.368 22.876 12.368H27.1V10.576C27.1 8.784 25.852 8.432 24.284 8.432H19.452C19.132 8.432 18.972 8.272 18.972 7.92ZM36.1683 9.904V21.52C36.1683 21.84 36.0083 22 35.6883 22H33.6083C33.2883 22 33.1283 21.84 33.1283 21.52V6.224C33.1283 5.904 33.2883 5.744 33.6083 5.744H35.2083L35.7523 6.768C36.1683 6.096 36.8723 5.744 38.1203 5.744H40.0723C41.2883 5.744 42.1203 6.128 42.6643 6.864C43.2083 6.128 43.9443 5.744 45.1283 5.744H47.0163C48.9683 5.744 50.1843 6.768 50.1843 8.592V21.52C50.1843 21.84 50.0243 22 49.7043 22H47.6243C47.3043 22 47.1443 21.84 47.1443 21.52V10C47.1443 8.848 46.5363 8.432 45.7363 8.432H44.4883C43.5603 8.432 43.1763 9.008 43.1763 10.032V21.52C43.1763 21.84 43.0163 22 42.6963 22H40.6163C40.2963 22 40.1363 21.84 40.1363 21.52V10C40.1363 8.848 39.5923 8.432 38.6963 8.432H37.4483C36.6483 8.432 36.1683 8.944 36.1683 9.904ZM59.2403 19.344H64.8083C65.1283 19.344 65.2883 19.472 65.2883 19.824V21.52C65.2883 21.84 65.1283 22 64.8083 22H58.9203C54.8563 22 53.1283 20.784 53.1283 16.496V11.024C53.1283 7.024 55.1443 5.744 58.8563 5.744H59.6562C62.9203 5.744 65.2883 6.672 65.2883 10.352V10.896C65.2883 13.232 63.9123 14.512 61.4803 14.512H56.1683V16.496C56.1683 18.672 57.1283 19.344 59.2403 19.344ZM62.7283 10.896V10.384C62.7283 8.848 61.8323 8.4 60.2323 8.4H59.0483C57.0963 8.4 56.1683 9.072 56.1683 11.088V12.368H60.9043C62.0883 12.368 62.7283 11.92 62.7283 10.896ZM80.6933 8.08L77.7173 20.56C77.4613 21.552 76.8213 22 75.8293 22H73.8453C72.8213 22 72.2133 21.552 71.9573 20.56L66.5813 2.576C66.4853 2.256 66.6133 2.096 66.9333 2.096H69.2053C69.4933 2.096 69.6533 2.224 69.7493 2.48L74.5493 18.928C74.6453 19.184 74.7093 19.344 74.9013 19.344H75.0293C75.1573 19.344 75.2853 19.184 75.3493 18.928L79.2533 2.48C79.3173 2.224 79.5093 2.096 79.7653 2.096H81.6533C81.8773 2.096 82.0373 2.224 82.1013 2.48L86.0373 18.928C86.1013 19.184 86.1653 19.344 86.3573 19.344H86.4853C86.6773 19.344 86.7413 19.184 86.8373 18.928L91.6373 2.48C91.7333 2.224 91.8933 2.096 92.1493 2.096H94.4533C94.7733 2.096 94.9013 2.256 94.7733 2.576L89.4293 20.56C89.1413 21.552 88.5333 22 87.5413 22H85.5573C84.5653 22 83.8933 21.552 83.6693 20.56L80.6933 8.08ZM101.659 19.376H102.107C105.307 19.376 106.683 17.168 106.683 14.16V13.552C106.683 10.48 105.243 8.368 102.043 8.368H101.691C98.5233 8.368 97.1153 10.544 97.1153 13.552V14.16C97.1153 16.272 97.7552 17.552 98.6833 18.32C99.5473 19.12 100.699 19.376 101.659 19.376ZM102.011 22.064H101.787C96.8593 22.064 94.2993 18.736 94.2993 14V13.712C94.2993 8.944 96.8273 5.648 101.787 5.648H102.011C106.619 5.648 109.499 8.56 109.499 13.712V14C109.499 19.152 106.619 22.064 102.011 22.064ZM111.753 21.52V6.224C111.753 5.904 111.913 5.744 112.233 5.744H113.833L114.377 6.768C114.793 6.096 115.497 5.744 116.745 5.744H119.817C120.137 5.744 120.265 5.872 120.297 6.224V7.952C120.297 8.272 120.169 8.4 119.817 8.432H116.169C115.273 8.432 114.793 8.976 114.793 9.904V21.52C114.793 21.84 114.665 21.968 114.313 22H112.233C111.913 22 111.785 21.872 111.753 21.52ZM130.214 17.936V8.432H126.31C124.838 8.432 124.262 9.232 124.262 10.256V17.36C124.262 18.16 124.55 18.672 124.966 18.928C125.35 19.216 125.894 19.312 126.374 19.312H128.742C129.638 19.312 130.214 18.832 130.214 17.936ZM132.774 22H131.174L130.63 20.976C130.214 21.648 129.51 22 128.262 22H124.87C122.726 22 121.222 20.848 121.222 18.544V9.712C121.222 6.992 123.334 5.744 125.83 5.744H130.214V0.976C130.214 0.655998 130.374 0.495998 130.694 0.495998H132.774C133.094 0.495998 133.254 0.655998 133.254 0.976V21.52C133.254 21.84 133.094 22 132.774 22Z" fill="#5E30CC"/>
+            </svg>
+          </div>
         {/* Feature Cards Container */}
         <div className="xl:absolute xl:top-0 xl:left-0 xl:w-full xl:h-full static flex flex-col gap-4 w-full max-w-[335px] md:max-w-[600px] md:grid md:grid-cols-2 md:gap-5 lg:max-w-[700px] lg:gap-6 mx-auto z-10">
           {/* Zero Hidden Fees */}
@@ -243,7 +249,7 @@ const Homepage = () => {
                 <path d="M10.0004 12C12.2095 12 14.0004 10.2091 14.0004 8C14.0004 5.79086 12.2095 4 10.0004 4C7.79123 4 6.00037 5.79086 6.00037 8C6.00037 10.2091 7.79123 12 10.0004 12ZM19.0049 0.00292969H1.00488C0.452603 0.00292969 0.00488281 0.45064 0.00488281 1.00293V15.0029C0.00488281 15.5552 0.452603 16.0029 1.00488 16.0029H19.0049C19.5572 16.0029 20.0049 15.5552 20.0049 15.0029V1.00293C20.0049 0.45064 19.5572 0.00292969 19.0049 0.00292969ZM2.00488 11.6463V4.35371C3.13065 4.017 4.01836 3.12892 4.35455 2.00293H15.6462C15.9833 3.13193 16.8748 4.02175 18.0049 4.3564V11.6436C16.8729 11.9788 15.9802 12.8711 15.6444 14.0029H4.3563C4.02144 12.8742 3.13261 11.9836 2.00488 11.6463Z" fill="#3E239E"/>
               </svg>
             </span>
-            <span className="font-northura text-xl md:text-2xl lg:text-xl xl:text-2xl text-black">Zero Hidden Fees</span>
+            <span className="font-northura text-xl md:text-2xl lg:text-lg xl:text-xl text-black">Zero Hidden Fees</span>
           </div>
           
           {/* Intuitive Interface */}
@@ -253,7 +259,7 @@ const Homepage = () => {
                 <path d="M17 20H1C0.44772 20 0 19.5523 0 19V1C0 0.44772 0.44772 0 1 0H17C17.5523 0 18 0.44772 18 1V19C18 19.5523 17.5523 20 17 20ZM16 18V2H2V18H16ZM4 4H8V8H4V4ZM4 10H14V12H4V10ZM4 14H14V16H4V14ZM10 5H14V7H10V5Z" fill="#3E239E"/>
               </svg>
             </span>
-            <span className="font-northura text-xl md:text-2xl lg:text-xl xl:text-2xl text-black">Intuitive Interface</span>
+            <span className="font-northura text-xl md:text-2xl lg:text-lg xl:text-xl text-black">Intuitive Interface</span>
           </div>
           
           {/* 24/7 Customer Support */}
@@ -263,7 +269,7 @@ const Homepage = () => {
                 <path d="M18.9381 7H20C21.1046 7 22 7.89543 22 9V13C22 14.1046 21.1046 15 20 15H18.9381C18.446 18.9463 15.0796 22 11 22V20C14.3137 20 17 17.3137 17 14V8C17 4.68629 14.3137 2 11 2C7.68629 2 5 4.68629 5 8V15H2C0.89543 15 0 14.1046 0 13V9C0 7.89543 0.89543 7 2 7H3.06189C3.55399 3.05369 6.92038 0 11 0C15.0796 0 18.446 3.05369 18.9381 7ZM2 9V13H3V9H2ZM19 9V13H20V9H19ZM6.75944 14.7849L7.81958 13.0887C8.74161 13.6662 9.8318 14 11 14C12.1682 14 13.2584 13.6662 14.1804 13.0887L15.2406 14.7849C14.0112 15.5549 12.5576 16 11 16C9.4424 16 7.98882 15.5549 6.75944 14.7849Z" fill="#3E239E"/>
               </svg>
             </span>
-            <span className="font-northura text-xl md:text-2xl lg:text-xl xl:text-2xl text-black">24/7 Customer Support</span>
+            <span className="font-northura text-xl md:text-2xl lg:text-lg xl:text-xl text-black">24/7 Customer Support</span>
           </div>
           
           {/* Secure Payments */}
@@ -273,7 +279,7 @@ const Homepage = () => {
                 <path d="M3 7V6C3 2.68629 5.68629 0 9 0C12.3137 0 15 2.68629 15 6V7H17C17.5523 7 18 7.44772 18 8V20C18 20.5523 17.5523 21 17 21H1C0.44772 21 0 20.5523 0 20V8C0 7.44772 0.44772 7 1 7H3ZM16 9H2V19H16V9ZM8 14.7324C7.4022 14.3866 7 13.7403 7 13C7 11.8954 7.8954 11 9 11C10.1046 11 11 11.8954 11 13C11 13.7403 10.5978 14.3866 10 14.7324V17H8V14.7324ZM5 7H13V6C13 3.79086 11.2091 2 9 2C6.79086 2 5 3.79086 5 6V7Z" fill="#3E239E"/>
               </svg>
             </span>
-            <span className="font-northura text-xl md:text-2xl lg:text-xl xl:text-2xl text-black">Secure Payments</span>
+            <span className="font-northura text-xl md:text-2xl lg:text-lg xl:text-xl text-black">Secure Payments</span>
           </div>
           
           {/* No Website Downtimes */}
@@ -283,7 +289,7 @@ const Homepage = () => {
                 <path d="M1 0H19C19.5523 0 20 0.44772 20 1V17C20 17.5523 19.5523 18 19 18H1C0.44772 18 0 17.5523 0 17V1C0 0.44772 0.44772 0 1 0ZM18 7H2V16H18V7ZM3 3V5H5V3H3ZM7 3V5H9V3H7Z" fill="#3E239E"/>
               </svg>
             </span>
-            <span className="font-northura text-xl md:text-2xl lg:text-2xl xl:text-2xl text-black">No Website Downtimes</span>
+            <span className="font-northura text-xl md:text-2xl lg:text-lg xl:text-xl text-black">No Website Downtimes</span>
           </div>
           
           {/* Competitive Plans */}
@@ -293,7 +299,7 @@ const Homepage = () => {
                 <path d="M9.9998 15L4.12197 18.5902L5.72007 11.8906L0.489258 7.40983L7.35479 6.85942L9.9998 0.5L12.6449 6.85942L19.5104 7.40983L14.2796 11.8906L15.8777 18.5902L9.9998 15Z" fill="#3E239E"/>
               </svg>
             </span>
-            <span className="font-northura text-xl md:text-2xl lg:text-xl xl:text-2xl text-black">Competitive Plans</span>
+            <span className="font-northura text-xl md:text-2xl lg:text-lg xl:text-xl text-black">Competitive Plans</span>
           </div>
         </div>
       </div>
@@ -459,9 +465,23 @@ const Homepage = () => {
               {/* Credible Card */}
               <div className="w-full max-w-[408px] h-[218px] rounded-[20px] bg-[#F3EDFF] shadow-[0px_25px_52px_0px_#9664E60F] flex flex-col px-[24px] pt-[36px] pb-[56px] gap-[10px]">
                 <div className="flex items-center gap-2 mb-2">
-                  <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <rect x="4" y="4" width="16" height="16" rx="4" fill="#7C5CD6"/>
-                    <path d="M8 12.5L11 15.5L16 10.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_8366_278018)">
+                  <rect x="14" y="17" width="40" height="40" rx="6" fill="white"/>
+                  <path d="M34 26L42.2169 27.826C42.6745 27.9277 43 28.3335 43 28.8022V38.7889C43 40.795 41.9974 42.6684 40.3282 43.7812L34 48L27.6718 43.7812C26.0026 42.6684 25 40.795 25 38.7889V28.8022C25 28.3335 25.3255 27.9277 25.7831 27.826L34 26ZM34 28.0488L27 29.6043V38.7889C27 40.1263 27.6684 41.3752 28.7812 42.1171L34 45.5963L39.2188 42.1171C40.3316 41.3752 41 40.1263 41 38.7889V29.6043L34 28.0488ZM38.4524 33.2218L39.8666 34.636L33.5026 41L29.26 36.7574L30.6742 35.3431L33.5019 38.1709L38.4524 33.2218Z" fill="#3E239E"/>
+                  </g>
+                  <defs>
+                  <filter id="filter0_d_8366_278018" x="0" y="0" width="88" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset dx="10" dy="7"/>
+                  <feGaussianBlur stdDeviation="12"/>
+                  <feComposite in2="hardAlpha" operator="out"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0.0171701 0 0 0 0 0.0891686 0 0 0 0 0.179167 0 0 0 0.06 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_8366_278018"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_8366_278018" result="shape"/>
+                  </filter>
+                  </defs>
                   </svg>
                   <span className="text-xl font-northura text-[#23295A]">Credible.</span>
                 </div>
@@ -473,10 +493,25 @@ const Homepage = () => {
               {/* Secure Card */}
               <div className="w-full max-w-[408px] h-[195px] rounded-[20px] bg-[#EAFFFB] shadow-[0px_25px_52px_0px_#9664E60F] flex flex-col px-[24px] pt-[36px] pb-[56px] gap-[10px]">
                 <div className="flex items-center gap-2 mb-2">
-                  <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                    <rect x="4" y="4" width="16" height="16" rx="4" fill="#2CD0A8"/>
-                    <path d="M12 16V12M12 12V10M12 12H10M12 12H14" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_8366_278026)">
+                  <rect x="14" y="17" width="40" height="40" rx="6" fill="white"/>
+                  <path d="M40 33H42C42.5523 33 43 33.4477 43 34V46C43 46.5523 42.5523 47 42 47H26C25.4477 47 25 46.5523 25 46V34C25 33.4477 25.4477 33 26 33H28V32C28 28.6863 30.6863 26 34 26C37.3137 26 40 28.6863 40 32V33ZM27 35V45H41V35H27ZM33 39H35V41H33V39ZM29 39H31V41H29V39ZM37 39H39V41H37V39ZM38 33V32C38 29.7909 36.2091 28 34 28C31.7909 28 30 29.7909 30 32V33H38Z" fill="#3E239E"/>
+                  </g>
+                  <defs>
+                  <filter id="filter0_d_8366_278026" x="0" y="0" width="88" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset dx="10" dy="7"/>
+                  <feGaussianBlur stdDeviation="12"/>
+                  <feComposite in2="hardAlpha" operator="out"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0.0171701 0 0 0 0 0.0891686 0 0 0 0 0.179167 0 0 0 0.06 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_8366_278026"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_8366_278026" result="shape"/>
+                  </filter>
+                  </defs>
                   </svg>
+
                   <span className="text-xl font-northura text-[#23295A]">Secure.</span>
                 </div>
                 <div className="text-[#23295A] text-sm font-korolevLight">
@@ -488,10 +523,25 @@ const Homepage = () => {
             {/* Right column: Popular Card */}
             <div className="w-full max-w-[408px] h-[449px] rounded-[20px] bg-[#D8D3EC] shadow-[0px_25px_52px_0px_#9664E60F] flex flex-col px-[24px] pt-[24px] pb-[50px] gap-[10px]">
               <div className="flex items-center gap-2 mb-2">
-                <svg width="24" height="24" fill="none" viewBox="0 0 24 24">
-                  <rect x="4" y="4" width="16" height="16" rx="4" fill="#7C5CD6"/>
-                  <path d="M12 8V16M8 12H16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <svg width="88" height="88" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <g filter="url(#filter0_d_8366_278035)">
+                  <rect x="14" y="17" width="40" height="40" rx="6" fill="white"/>
+                  <path d="M24 47C24 42.5817 27.5817 39 32 39C36.4183 39 40 42.5817 40 47H38C38 43.6863 35.3137 41 32 41C28.6863 41 26 43.6863 26 47H24ZM32 38C28.685 38 26 35.315 26 32C26 28.685 28.685 26 32 26C35.315 26 38 28.685 38 32C38 35.315 35.315 38 32 38ZM32 36C34.21 36 36 34.21 36 32C36 29.79 34.21 28 32 28C29.79 28 28 29.79 28 32C28 34.21 29.79 36 32 36ZM40.2837 39.7028C43.0644 40.9561 45 43.752 45 47H43C43 44.564 41.5483 42.4671 39.4628 41.5271L40.2837 39.7028ZM39.5962 28.4132C41.5944 29.237 43 31.2036 43 33.5C43 36.3702 40.8042 38.7252 38 38.9776V36.9646C39.6967 36.7222 41 35.264 41 33.5C41 32.1193 40.2016 30.926 39.041 30.3563L39.5962 28.4132Z" fill="#3E239E"/>
+                  </g>
+                  <defs>
+                  <filter id="filter0_d_8366_278035" x="0" y="0" width="88" height="88" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                  <feOffset dx="10" dy="7"/>
+                  <feGaussianBlur stdDeviation="12"/>
+                  <feComposite in2="hardAlpha" operator="out"/>
+                  <feColorMatrix type="matrix" values="0 0 0 0 0.0171701 0 0 0 0 0.0891686 0 0 0 0 0.179167 0 0 0 0.06 0"/>
+                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_8366_278035"/>
+                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_8366_278035" result="shape"/>
+                  </filter>
+                  </defs>
                 </svg>
+
                 <span className="text-xl font-northura text-[#23295A]">Popular.</span>
               </div>
               <div className="text-[#23295A] text-sm font-korolevLight">
@@ -500,9 +550,8 @@ const Homepage = () => {
               
               {/* Domain input */}
               <div className="mt-6 w-full flex flex-row items-center bg-white rounded-full px-4 py-2 gap-2">
-                <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
-                  <circle cx="10" cy="10" r="8" stroke="#B0B0B0" strokeWidth="2"/>
-                  <path d="M18 18l-3.5-3.5" stroke="#B0B0B0" strokeWidth="2" strokeLinecap="round"/>
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.8333 8.33317H16.6667C17.1269 8.33317 17.5 8.70625 17.5 9.1665V17.4998C17.5 17.9601 17.1269 18.3332 16.6667 18.3332H3.33333C2.8731 18.3332 2.5 17.9601 2.5 17.4998V9.1665C2.5 8.70625 2.8731 8.33317 3.33333 8.33317H4.16667V7.49984C4.16667 4.27818 6.77834 1.6665 10 1.6665C13.2217 1.6665 15.8333 4.27818 15.8333 7.49984V8.33317ZM14.1667 8.33317V7.49984C14.1667 5.19865 12.3012 3.33317 10 3.33317C7.69882 3.33317 5.83333 5.19865 5.83333 7.49984V8.33317H14.1667ZM9.16667 11.6665V14.9998H10.8333V11.6665H9.16667Z" fill="#3E239E"/>
                 </svg>
                 <span className="text-[#8B8B8B] text-sm font-korolevLight">https://</span>
                 <input 
@@ -751,44 +800,6 @@ const Homepage = () => {
       {/* Left: Main image with floating cards */}
       <div className="relative w-full max-w-[665px] h-[400px] sm:h-[500px] md:h-[550px] lg:w-[665px] lg:h-[623px] flex items-center justify-center">
         <img src={girlImg} alt="Brand" className="w-full h-full object-cover rounded-[32px]" />
-        
-        {/* Floating Card: Establish */}
-        <div className="absolute top-[20px] left-[10px] sm:top-[30px] sm:left-[15px] lg:top-[40px] lg:left-[20px] flex flex-col items-start bg-white rounded-full px-4 py-2 sm:px-5 sm:py-2.5 lg:px-6 lg:py-3 shadow-lg min-w-[140px] sm:min-w-[160px] lg:min-w-[180px]">
-          <div className="flex items-center gap-2">
-            <div className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-[#6C63FF] flex items-center justify-center">
-              <svg width="12" height="12" sm:width="16" sm:height="16" fill="none" viewBox="0 0 16 16">
-                <path d="M8 3v6m0 0l3-3m-3 3l-3-3" stroke="#fff" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-              </svg>
-            </div>
-            <span className="font-semibold text-[#3E239E] text-sm sm:text-base">Establish</span>
-          </div>
-          <span className="text-xs text-[#6B6B6B] ml-7 sm:ml-8">Brand identity</span>
-        </div>
-        
-        {/* Floating Card: Domains */}
-        <div className="absolute bottom-[80px] left-[0px] sm:bottom-[100px] lg:bottom-[120px] lg:left-[0px] flex flex-col bg-white rounded-[20px] px-3 py-2 sm:px-4 sm:py-3 shadow-lg min-w-[130px] sm:min-w-[150px] lg:min-w-[160px]">
-          <div className="flex items-center gap-2 mb-1">
-            <svg width="18" height="18" sm:width="20" sm:height="20" fill="none" viewBox="0 0 20 20">
-              <circle cx="10" cy="10" r="10" fill="#6C63FF"/>
-              <path d="M7 10h6" stroke="#fff" strokeWidth="2" strokeLinecap="round"/>
-            </svg>
-            <span className="font-semibold text-[#3E239E] text-sm sm:text-base">Domains</span>
-          </div>
-          <span className="text-xs text-[#6B6B6B] ml-6 sm:ml-7">Digital Storefront</span>
-        </div>
-        
-        {/* Floating Card: Jake chat */}
-        <div className="absolute bottom-[20px] right-[10px] sm:bottom-[30px] lg:bottom-[40px] lg:right-[10px] bg-white rounded-[20px] px-4 py-3 sm:px-5 sm:py-3.5 lg:px-6 lg:py-4 shadow-lg flex items-center gap-3 sm:gap-4 min-w-[180px] sm:min-w-[200px] lg:min-w-[220px]">
-          <div className="flex-1">
-            <div className="flex items-center gap-2 mb-2">
-              <span className="block w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 rounded-full bg-gray-200 overflow-hidden">
-                <img src="/profiles/profile1.jpg" alt="Jake" className="w-full h-full object-cover" />
-              </span>
-              <span className="font-semibold text-[#3E239E] text-sm sm:text-base">Jake</span>
-            </div>
-            <div className="text-xs text-[#6B6B6B]">Hi, how can I help?</div>
-          </div>
-        </div>
       </div>
       
       {/* Right: Text and button */}
@@ -839,7 +850,7 @@ const Homepage = () => {
       {/* Cards Grid */}
       <div className="w-full max-w-[1296px] h-auto bg-[#F6F6FF] rounded-[28px] md:rounded-[56px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[16px] md:gap-[24px] lg:gap-[32px] mx-auto items-center justify-center p-[20px] md:p-[32px] lg:p-[40px] font-korolev">
         {/* Card 1 */}
-        <div className="w-full max-w-[368px] h-auto md:h-[259px] bg-white rounded-[16px] shadow-[17px_15px_32px_0px_#2745BE0F] p-4 md:p-6 flex flex-col gap-4 md:gap-6 mx-auto">
+        <div className="w-full max-w-[368px] h-auto md:h-[259px] bg-white rounded-[16px] shadow-[17px_15px_32px_0px_#2745BE0F] p-4 md:p-6 flex flex-col items-center gap-4 md:gap-6 mx-auto">
           <div className="w-10 h-10 bg-[#E5DEFF] rounded-full flex items-center justify-center mb-2">
             {/* SSL Icon */}
             <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -847,12 +858,12 @@ const Homepage = () => {
             </svg>
           </div>
           <div className="font-bold text-lg text-black">SSL certificates</div>
-          <div className="text-[#6B6B6B] text-sm">Improve your website's security by encrypting connexions</div>
+          <div className="text-[#6B6B6B] text-xs lg:text-sm text-center">Improve your website's security by encrypting connexions</div>
           <button className="w-full h-[44px] bg-gradient-to-r from-[#8B7BC5] to-[#3E239E] text-white rounded-full font-semibold text-base mt-auto">Start Now</button>
         </div>
         
         {/* Card 2 */}
-        <div className="w-full max-w-[368px] h-auto md:h-[259px] bg-white rounded-[16px] shadow-[17px_15px_32px_0px_#2745BE0F] p-4 md:p-6 flex flex-col gap-4 md:gap-6 mx-auto">
+        <div className="w-full max-w-[368px] h-auto md:h-[259px] bg-white rounded-[16px] shadow-[17px_15px_32px_0px_#2745BE0F] p-4 md:p-6 flex flex-col items-center gap-4 md:gap-6 mx-auto">
           <div className="w-10 h-10 bg-[#E5DEFF] rounded-full flex items-center justify-center mb-2">
             {/* Privacy Icon */}
             <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -860,12 +871,12 @@ const Homepage = () => {
             </svg>
           </div>
           <div className="font-bold text-lg text-black">WHOIS privacy</div>
-          <div className="text-[#6B6B6B] text-sm">Protect the confidentiality of your personal information</div>
+          <div className="text-[#6B6B6B] text-xs lg:text-sm text-center">Protect the confidentiality of your personal information</div>
           <button className="w-full h-[44px] bg-gradient-to-r from-[#8B7BC5] to-[#3E239E] text-white rounded-full font-semibold text-base mt-auto">Start Now</button>
         </div>
         
         {/* Card 3 */}
-        <div className="w-full max-w-[368px] h-auto md:h-[259px] bg-white rounded-[16px] shadow-[17px_15px_32px_0px_#2745BE0F] p-4 md:p-6 flex flex-col gap-4 md:gap-6 mx-auto md:col-span-2 lg:col-span-1">
+        <div className="w-full max-w-[368px] h-auto md:h-[259px] bg-white rounded-[16px] shadow-[17px_15px_32px_0px_#2745BE0F] p-4 md:p-6 flex flex-col items-center gap-4 md:gap-6 mx-auto md:col-span-2 lg:col-span-1">
           <div className="w-10 h-10 bg-[#E5DEFF] rounded-full flex items-center justify-center mb-2">
             {/* Hosting Icon */}
             <svg width="21" height="16" viewBox="0 0 21 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -873,7 +884,7 @@ const Homepage = () => {
             </svg>
           </div>
           <div className="font-bold text-lg text-black">Hosting plans</div>
-          <div className="text-[#6B6B6B] text-sm">Explore  our range of web hosting plans  and pick yours!</div>
+          <div className="text-[#6B6B6B] text-xs lg:text-sm text-center">Explore  our range of web hosting plans  and pick yours!</div>
           <button className="w-full h-[44px] bg-gradient-to-r from-[#8B7BC5] to-[#3E239E] text-white rounded-full font-semibold text-base mt-auto">Start Now</button>
         </div>
       </div>
@@ -1124,7 +1135,7 @@ const Homepage = () => {
       {/* Pro Website Designs Section */}
       <section className="w-full max-w-[90rem] 2xl:max-w-[100%] h-auto min-h-[832px] xl:h-[832px] flex flex-col xl:flex-row items-center gap-6 md:gap-12 xl:gap-[74px] rounded-br-[56px] rounded-bl-[56px] bg-[#020738] opacity-100 mx-auto px-4 md:px-8 xl:px-0 py-8 xl:py-0">
       {/* Left: Image with floating cards */}
-      <div className="relative w-full max-w-[823px] h-[400px] md:h-[500px] xl:h-[612px] xl:ml-auto order-2 xl:order-1">
+      <div className="relative w-full max-w-[823px] h-[400px] md:h-[500px] xl:h-[612px] xl:ml-auto order-1 xl:order-1">
         <img src={kleberImg} alt="Kleber" className="w-full h-full object-cover rounded-tr-[40px] rounded-bl-[40px]" />
         
         {/* Floating Kleber label - responsive positioning */}
@@ -1185,13 +1196,13 @@ const Homepage = () => {
       </div>
 
       {/* Right: Text and button */}
-      <div className="flex flex-col justify-between w-full max-w-[540px] xl:w-[540px] h-auto xl:h-[250px] gap-4 md:gap-6 xl:gap-8 order-1 xl:order-2 text-center xl:text-left">
+      <div className="flex flex-col justify-between w-full max-w-[540px] xl:w-[540px] h-auto xl:h-[250px] gap-4 md:gap-6 xl:gap-8 order-2 xl:order-2 text-center xl:text-left">
         <h2 className="text-2xl md:text-3xl xl:text-4xl font-northuraHeavy text-white mb-2 xl:mb-4">Pro Website Designs</h2>
         <p className="text-[#B0B0B0] text-sm md:text-base xl:text-base font-korolevLight mb-4 xl:mb-8 px-4 xl:px-0">
           A well designed website is crucial for attracting and retaining customers. Our NameWord design team creates responsive, aesthetically pleasing websites that provide a superior user experience across all devices.
         </p>
         <div className="flex justify-center xl:justify-start">
-          <button className="w-[160px] h-[70px] md:w-[175px] md:h-[80px] xl:w-[191px] xl:h-[91px] bg-gradient-to-r from-[#8B7BC5] to-[#3E239E] text-white rounded-full font-korolevExpanded font-thin text-xs">Explore Web Designs</button>
+          <button className="w-[160px] h-[70px] md:w-[160px] md:h-[50px] xl:w-[180px] xl:h-[50px] bg-gradient-to-r from-[#8B7BC5] to-[#3E239E] text-white rounded-full font-korolevExpanded font-thin text-xs lg:text-sm">Explore Web Designs</button>
         </div>
       </div>
       </section>
@@ -1282,7 +1293,14 @@ const Homepage = () => {
 
       
       {/* Testimonials Section */}
+      <section className="w-full max-w-[1440px] mx-auto flex flex-col items-center justify-center bg-white relative" style={{gap: '64px', opacity: 1, paddingTop: '80px', paddingRight: '72px', paddingBottom: '80px', paddingLeft: '72px', minHeight: '907px'}}>
+        <Testimonials />
+      </section>
           
+      {/* Clients Feedback Section */}
+      <section className="w-full max-w-[1438px] mx-auto flex flex-col items-center justify-center bg-white relative" style={{gap: '148px', opacity: 1, paddingTop: '80px', paddingRight: '72px', paddingBottom: '80px', paddingLeft: '72px', minHeight: '688px'}}>
+        <ClientsFeedback />
+      </section>
 
       {/* Ready to Elevate Your Online Presence Section */}
       <section className="relative w-full 2xl:max-w-[100%] flex justify-center items-center py-20 px-16 lg:px-16 md:px-8 sm:px-4" style={{ background: '#fff' }}>  

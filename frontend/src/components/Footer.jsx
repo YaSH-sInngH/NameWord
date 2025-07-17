@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="w-full bg-[#3E239E] text-white" style={{ opacity: 1 }}>
       {/* Main Content Container */}
       <div
-        className="flex flex-col md:flex-row items-center md:items-start justify-between pt-8 sm:pt-12 md:pt-[80px] lg:pt-[120px] px-[20px] lg:px-[72px] pb-8 sm:pb-12 md:pb-[120px] lg:pb-[320px] gap-8 sm:gap-10 md:gap-[20px] lg:gap-[120px] xl:gap-[39px] max-w-[95vw] md:max-w-[900px] lg:max-w-[1100px] xl:max-w-[1296px] mx-auto"
+        className="flex flex-col md:flex-row items-center md:items-start justify-between pt-8 sm:pt-12 md:pt-[80px] lg:pt-[60px] px-[20px] lg:px-[72px] pb-8 sm:pb-12 md:pb-[120px] lg:pb-[120px] gap-8 sm:gap-10 md:gap-[20px] lg:gap-[120px] xl:gap-[39px] max-w-[95vw] md:max-w-[900px] lg:max-w-[1100px] xl:max-w-[1296px] mx-auto"
         style={{ width: '100%', opacity: 1 }}
       >
         {/* Brand/Info */}

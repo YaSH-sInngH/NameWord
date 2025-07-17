@@ -82,26 +82,15 @@ export default function PaymentStatus() {
             {payments.map((p, idx) => {
               const style = statusStyles[p.status];
               return (
-                <div key={idx} className="border border-[#F0F0F0] rounded-lg p-4 bg-white flex flex-col gap-2">
-                  <div className="flex items-center justify-between mb-2">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium" style={{ background: style.bg, color: style.color }}>
-                      {style.icon}
-                      {p.status}
-                    </span>
-                    <span className="font-semibold text-base text-[#1C1E40]">{p.name}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-[#505050]">Date</span>
-                    <span className="text-[#1C1E40]">{p.date}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-[#505050]">Due Date</span>
-                    <span className="text-[#1C1E40]">{p.due}</span>
-                  </div>
-                  <div className="flex justify-between text-sm">
-                    <span className="text-[#505050]">Total</span>
-                    <span className="text-sm font-semibold text-[#1C1E40]">{p.total}</span>
-                  </div>
+                <div key={idx} className="rounded-xl bg-white p-4 mb-2 flex flex-col items-center text-center border border-[#EAEAEA]">
+                  <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium mb-2" style={{ background: style.bg, color: style.color }}>
+                    {style.icon}
+                    {p.status}
+                  </span>
+                  <div className="font-bold text-[#1C1E40] text-base mb-2">{p.name}</div>
+                  <div className="text-[#505050] text-sm mb-1">{p.date}</div>
+                  <div className="text-[#505050] text-sm mb-1">{p.due}</div>
+                  <div className="font-bold text-[#1C1E40] text-base">{p.total}</div>
                 </div>
               );
             })}
