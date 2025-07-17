@@ -36,46 +36,78 @@ const statusStyles = {
   },
 };
 
-const PaymentStatus = () => (
-  <div className="w-[1440px] h-[1024px] bg-[#F7F7FC] relative overflow-x-hidden">
-    <NewNavbar activeSection="Wallet & Billing" />
-    <Sidebar />
-    <main className="ml-[250px] w-[1190px] pt-10 px-8 pb-10 flex flex-col gap-8 min-h-[944px]">
-      <h1 className="text-[28px] font-bold text-[#1C1E40] leading-[36px] mb-6">Payment status</h1>
-      <div className="bg-white rounded-[16px] p-6 shadow-sm">
-        <table className="w-full text-left">
-          <thead>
-            <tr className="text-black text-base font-bold font-northuraExpanded h-[64px]">
-              <th className="py-2">Status</th>
-              <th className="py-2">Name</th>
-              <th className="py-2">Date</th>
-              <th className="py-2">Due Date</th>
-              <th className="py-2">Total</th>
-            </tr>
-          </thead>
-          <tbody>
+export default function PaymentStatus() {
+  return (
+    <div className="min-h-screen bg-[#F7F7FC] relative">
+      <NewNavbar activeSection="Wallet & Billing" />
+      <Sidebar />
+      <main className="pt-6 lg:ml-[250px] px-4 sm:px-6 lg:px-8 pb-10">
+        <div className="max-w-[1188px] mx-auto">
+          <h1 className="text-2xl sm:text-3xl lg:text-[28px] font-bold text-[#1C1E40] leading-tight lg:leading-[36px] mb-6 lg:mb-8">Payment status</h1>
+          {/* Desktop Table */}
+          <div className="hidden lg:block bg-white rounded-[16px] p-6 shadow-sm">
+            <table className="w-full text-left">
+              <thead>
+                <tr className="text-black text-base font-bold font-northuraExpanded h-[64px]">
+                  <th className="py-2">Status</th>
+                  <th className="py-2">Name</th>
+                  <th className="py-2">Date</th>
+                  <th className="py-2">Due Date</th>
+                  <th className="py-2">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                {payments.map((p, idx) => {
+                  const style = statusStyles[p.status];
+                  return (
+                    <tr key={idx} className="border-t border-[#F0F0F0] text-[#1C1E40] text-base hover:bg-[#F7F7FC]">
+                      <td className="py-3">
+                        <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium" style={{ background: style.bg, color: style.color }}>
+                          {style.icon}
+                          {p.status}
+                        </span>
+                      </td>
+                      <td className="py-3 font-semibold">{p.name}</td>
+                      <td className="py-3">{p.date}</td>
+                      <td className="py-3">{p.due}</td>
+                      <td className="py-3">{p.total}</td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+          {/* Mobile Card Layout */}
+          <div className="lg:hidden space-y-4">
             {payments.map((p, idx) => {
               const style = statusStyles[p.status];
               return (
-                <tr key={idx} className="border-t border-[#F0F0F0] text-[#1C1E40] text-base hover:bg-[#F7F7FC]">
-                  <td className="py-3">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full text-sm font-medium" style={{ background: style.bg, color: style.color }}>
+                <div key={idx} className="border border-[#F0F0F0] rounded-lg p-4 bg-white flex flex-col gap-2">
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium" style={{ background: style.bg, color: style.color }}>
                       {style.icon}
                       {p.status}
                     </span>
-                  </td>
-                  <td className="py-3 font-semibold">{p.name}</td>
-                  <td className="py-3">{p.date}</td>
-                  <td className="py-3">{p.due}</td>
-                  <td className="py-3">{p.total}</td>
-                </tr>
+                    <span className="font-semibold text-base text-[#1C1E40]">{p.name}</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-[#505050]">Date</span>
+                    <span className="text-[#1C1E40]">{p.date}</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-[#505050]">Due Date</span>
+                    <span className="text-[#1C1E40]">{p.due}</span>
+                  </div>
+                  <div className="flex justify-between text-sm">
+                    <span className="text-[#505050]">Total</span>
+                    <span className="text-sm font-semibold text-[#1C1E40]">{p.total}</span>
+                  </div>
+                </div>
               );
             })}
-          </tbody>
-        </table>
-      </div>
-    </main>
-  </div>
-);
-
-export default PaymentStatus; 
+          </div>
+        </div>
+      </main>
+    </div>
+  );
+} 

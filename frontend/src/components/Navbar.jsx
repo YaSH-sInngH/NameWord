@@ -18,7 +18,7 @@ const Navbar = ({ onHomeClick, onServicesClick, onRatesClick, onContactClick, on
     <nav className="w-full h-auto lg:h-[80px] bg-[#3E239E] border-b-[1.2px] border-[#485969] font-korolevHeavy">
       <div className="w-full max-w-[1440px] mx-auto">
         {/* Desktop Navigation */}
-        <div className="hidden lg:flex xl:flex items-center flex-nowrap justify-between h-[80px] px-4 md:px-8 xl:px-[72px] gap-[10px]">
+        <div className="hidden lg:flex xl:flex items-center flex-nowrap justify-between h-[80px] lg:px-4 xl:px-8 xl:px-[72px] lg:gap-[4px] xl:gap-[10px]">
           {/* Logo */}
           <div className="flex items-center">
             <svg width="168" height="38" viewBox="0 0 168 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,11 +53,11 @@ const Navbar = ({ onHomeClick, onServicesClick, onRatesClick, onContactClick, on
           </div>
           
           {/* Right Controls */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center lg:gap-1 xl:gap-3">
             {/* Language Dropdown */}
             <div className="relative">
               <button
-                className="w-[66px] h-[36px] flex items-center justify-between px-3 rounded-[8px] bg-[#0000004D] text-white text-base font-bold focus:outline-none"
+                className="md:w-[40px] lg:w-[50px] xl:w-[66px] h-[36px] flex items-center justify-between px-3 rounded-[8px] bg-[#0000004D] text-white text-base font-bold focus:outline-none"
                 onClick={() => setLangOpen((v) => !v)}
               >
                 {language}
@@ -81,7 +81,7 @@ const Navbar = ({ onHomeClick, onServicesClick, onRatesClick, onContactClick, on
             </div>
             
             {/* Theme Toggle */}
-            <div className="flex items-center w-[84px] h-[34px] rounded-full bg-[#0000004D] px-1 gap-4">
+            <div className="flex items-center w-[50px] md:w-[64px] lg:w-[72px] xl:w-[84px] h-[34px] rounded-full bg-[#0000004D] px-1 md:gap-2 lg:gap-3 xl:gap-4">
               <button
                 className={`flex items-center justify-center w-[30px] h-[30px] rounded-full transition-colors
                   ${theme === 'light' ? 'bg-[#7B6ED6]' : 'bg-transparent'}`}
@@ -107,10 +107,10 @@ const Navbar = ({ onHomeClick, onServicesClick, onRatesClick, onContactClick, on
             
             {/* Auth Buttons */}
             <Link to="/login">
-              <button className="bg-white text-black rounded-full min-w-[89px] min-h-[49px] px-5 py-4 text-base transition">Sign In</button>
+              <button className="bg-white text-black rounded-full lg:min-w-[79px] lg:min-h-[49px] xl:min-w-[89px] xl:min-h-[49px] lg:px-4 lg:py-3 xl:px-5 xl:py-4 lg:text-base xl:text-base transition">Sign In</button>
             </Link>
             <button
-              className="bg-[#654FB1] hover:bg-[#5139A8] text-white rounded-full min-w-[191px] min-h-[49px] px-5 py-4 text-base font-medium transition"
+              className="bg-[#654FB1] hover:bg-[#5139A8] text-white rounded-full md:w-[140px] xl:min-w-[191px] min-h-[49px] lg:px-[4] lg-py-[3] xl:px-5 xl:py-4  lg:text-xs xl:text-base font-medium transition"
               onClick={() => navigate('/signup')}
             >
               Create FREE Account

@@ -6,23 +6,23 @@ const SearchDomain = () => {
   return (
     <div className="min-h-screen bg-[#F7F7FC] w-full">
       <NewNavbar activeSection="Domains" />
-      <div className="relative w-[1440px] mx-auto flex flex-col items-center">
+      <div className="relative w-full max-w-[1440px] mx-auto flex flex-col items-center px-4 sm:px-6 lg:px-8 xl:px-0">
         {/* Left SVG Circle Placeholder */}
-        <div className="absolute left-0 top-0 z-0" style={{ width: 300, height: 300 }}>
+        <div className="absolute left-0 top-0 z-0 hidden xl:block" style={{ width: 300, height: 300 }}>
           {/* Left SVG goes here */}
         </div>
         {/* Right SVG Circle Placeholder */}
-        <div className="absolute right-0 top-0 z-0" style={{ width: 300, height: 300 }}>
+        <div className="absolute right-0 top-0 z-0 hidden xl:block" style={{ width: 300, height: 300 }}>
           {/* Right SVG goes here */}
         </div>
         {/* Search Section */}
-        <section className="relative z-10 flex flex-col items-center justify-center w-full h-[540px]">
-          <h1 className="text-3xl font-bold text-[#1C1E40] mb-2">Search domains</h1>
-          <p className="text-[#505050] text-lg mb-8">Boost your brand's visibility and credibility with the right one.</p>
+        <section className="relative z-10 flex flex-col items-center justify-center w-full h-[400px] sm:h-[450px] lg:h-[500px] xl:h-[540px] py-8 sm:py-12 lg:py-16">
+          <h1 className="text-2xl sm:text-3xl lg:text-3xl font-bold text-[#1C1E40] mb-2 text-center px-4">Search domains</h1>
+          <p className="text-[#505050] text-base sm:text-lg lg:text-lg mb-6 sm:mb-8 text-center px-4">Boost your brand's visibility and credibility with the right one.</p>
           {/* Search Bar */}
-          <div className="flex items-center mb-4">
-            <div className="flex items-center bg-white border border-[#EAEAEA] rounded-full px-4 py-2 relative w-[560px]">
-              <span className="material-icons text-[#A3A3A3] mr-2">
+          <div className="flex items-center mb-4 w-full max-w-[560px] px-4 sm:px-0">
+            <div className="flex items-center bg-white border border-[#EAEAEA] rounded-full px-4 py-2 relative w-full">
+              <span className="material-icons text-[#A3A3A3] mr-2 flex-shrink-0">
                 <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M9 0C13.968 0 18 4.032 18 9C18 13.968 13.968 18 9 18C4.032 18 0 13.968 0 9C0 4.032 4.032 0 9 0ZM9 16C12.8675 16 16 12.8675 16 9C16 5.1325 12.8675 2 9 2C5.1325 2 2 5.1325 2 9C2 12.8675 5.1325 16 9 16ZM17.4853 16.0711L20.3137 18.8995L18.8995 20.3137L16.0711 17.4853L17.4853 16.0711Z" fill="#515151"/>
                 </svg>
@@ -30,25 +30,30 @@ const SearchDomain = () => {
               <input
                 type="text"
                 placeholder="Search"
-                className="flex-1 bg-transparent outline-none text-[#1C1E40] text-base pr-24"
+                className="flex-1 bg-transparent outline-none text-[#1C1E40] text-base pr-4 sm:pr-24"
                 style={{ border: 'none', boxShadow: 'none' }}
               />
-              <button className="w-[104px] rounded-full bg-[#BFA5F8] text-white font-thin text-lg h-[40px] items-center justify-center shadow-none border-none">Go</button>
+              <button className="w-[60px] sm:w-[104px] rounded-full bg-[#BFA5F8] text-white font-thin text-base sm:text-lg h-[36px] sm:h-[40px] items-center justify-center shadow-none border-none flex-shrink-0">
+                <span className="hidden sm:inline">Go</span>
+                <span className="sm:hidden">Go</span>
+              </button>
             </div>
           </div>  
           {/* Filters */}
-          <div className="flex items-center gap-2 mb-4">
-            <span className="text-[#505050] text-base font-medium mr-2">Filters</span>
-            <span className="bg-[#F3EDFF] text-[#9664E6] rounded-full px-4 py-1 text-base font-medium">.io</span>
-            <span className="bg-[#F7F7FC] text-[#1C1E40] rounded-full px-4 py-1 text-base font-medium border border-[#EAEAEA]">.com.br</span>
-            <span className="bg-[#F7F7FC] text-[#1C1E40] rounded-full px-4 py-1 text-base font-medium border border-[#EAEAEA]">.xyz</span>
-            <span className="bg-[#F7F7FC] text-[#1C1E40] rounded-full px-4 py-1 text-base font-medium border border-[#EAEAEA]">.easy</span>
-            <span className="bg-[#F7F7FC] text-[#1C1E40] rounded-full px-4 py-1 text-base font-medium border border-[#EAEAEA]">.corp</span>
-            <span className="bg-[#F7F7FC] text-[#1C1E40] rounded-full px-4 py-1 text-base font-medium border border-[#EAEAEA]">.co</span>
+          <div className="flex items-center gap-2 mb-4 w-full max-w-[560px] px-4 sm:px-0 overflow-x-auto">
+            <span className="text-[#505050] text-sm sm:text-base font-medium mr-2 flex-shrink-0">Filters</span>
+            <div className="flex items-center gap-2 flex-nowrap sm:flex-wrap">
+              <span className="bg-[#F3EDFF] text-[#9664E6] rounded-full px-3 sm:px-4 py-1 text-sm sm:text-base font-medium flex-shrink-0">.io</span>
+              <span className="bg-[#F7F7FC] text-[#1C1E40] rounded-full px-3 sm:px-4 py-1 text-sm sm:text-base font-medium border border-[#EAEAEA] flex-shrink-0">.com.br</span>
+              <span className="bg-[#F7F7FC] text-[#1C1E40] rounded-full px-3 sm:px-4 py-1 text-sm sm:text-base font-medium border border-[#EAEAEA] flex-shrink-0">.xyz</span>
+              <span className="bg-[#F7F7FC] text-[#1C1E40] rounded-full px-3 sm:px-4 py-1 text-sm sm:text-base font-medium border border-[#EAEAEA] flex-shrink-0">.easy</span>
+              <span className="bg-[#F7F7FC] text-[#1C1E40] rounded-full px-3 sm:px-4 py-1 text-sm sm:text-base font-medium border border-[#EAEAEA] flex-shrink-0">.corp</span>
+              <span className="bg-[#F7F7FC] text-[#1C1E40] rounded-full px-3 sm:px-4 py-1 text-sm sm:text-base font-medium border border-[#EAEAEA] flex-shrink-0">.co</span>
+            </div>
           </div>
           {/* Register/Transfer Toggle */}
-          <div className="flex items-center gap-4 mb-12">
-            <span className={`font-medium text-base ${isRegister ? 'text-[#1C1E40]' : 'text-[#A3A3A3]'}`}>Register</span>
+          <div className="flex items-center gap-4 mb-8 sm:mb-12">
+            <span className={`font-medium text-sm sm:text-base ${isRegister ? 'text-[#1C1E40]' : 'text-[#A3A3A3]'}`}>Register</span>
             <label className="relative inline-flex items-center cursor-pointer">
               <input
                 type="checkbox"
@@ -56,26 +61,25 @@ const SearchDomain = () => {
                 onChange={() => setIsRegister((v) => !v)}
                 className="sr-only peer"
               />
-              <div className="w-14 h-7 bg-[#E0E0E0] peer-checked:bg-[#9664E6] rounded-full transition-all"></div>
-              <div className="absolute left-1 top-1 w-5 h-5 bg-white rounded-full shadow transform transition-transform peer-checked:translate-x-7"></div>
+              <div className="w-12 sm:w-14 h-6 sm:h-7 bg-[#E0E0E0] peer-checked:bg-[#9664E6] rounded-full transition-all"></div>
+              <div className="absolute left-1 top-1 w-4 sm:w-5 h-4 sm:h-5 bg-white rounded-full shadow transform transition-transform peer-checked:translate-x-6 sm:peer-checked:translate-x-7"></div>
             </label>
-            <span className={`font-medium text-base ${!isRegister ? 'text-[#1C1E40]' : 'text-[#A3A3A3]'}`}>Transfer</span>
+            <span className={`font-medium text-sm sm:text-base ${!isRegister ? 'text-[#1C1E40]' : 'text-[#A3A3A3]'}`}>Transfer</span>
           </div>
         </section>
         
-        
         {/* Hero Section Placeholder (replace with Homepage.jsx hero section) */}
         <div
-            className="relative w-[1128px] h-[434px] rounded-tl-[24px] rounded-tr-[24px] bg-[#0C1141] shadow-[0px_-2px_64px_0px_#2745BE14] overflow-visible flex flex-col justify-between px-8 py-6"
+            className="relative md:w-[720px] xl:w-[1128px] h-auto mt-[20px] lg:[mt-122px] xl:mt-[122px] ml-[10px] rounded-tl-[24px] rounded-tr-[24px] bg-[#0C1141] shadow-[0px_-2px_64px_0px_#2745BE14] overflow-visible flex flex-col justify-between px-8 py-6"
             style={{
               border: '1.2px solid',
               borderImage: `linear-gradient(0deg, rgba(255,255,255,0.16), rgba(255,255,255,0.16)), conic-gradient(from 0deg at 50% 2.74%, #FFFFFF 0deg, rgba(255,255,255,0) 87.28deg, rgba(255,255,255,0) 271.8deg, #FFFFFF 360deg) 1`,
               borderImageSlice: 1,
             }}
           >
-            <div className="w-full grid grid-cols-2 grid-rows-2 gap-x-6 gap-y-8">
+            <div className="w-full flex flex-col lg:grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-x-2 md:gap-x-6 gap-y-4 md:gap-y-8">
               {/* Get Domain Card (top left) */}
-              <div className="relative flex flex-row items-center w-[524px] h-[151px] rounded-[15.94px] bg-[#23295A] px-8 py-6 overflow-hidden col-start-1 row-start-1">
+              <div className="relative flex flex-row items-center w-full lg:h-[151px] rounded-[15.94px] bg-[#23295A] px-1 py-2 lg:px-8 lg:py-6 overflow-hidden col-start-1 row-start-1">
                 <svg width="126" height="53" viewBox="0 0 126 53" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute right-0 bottom-0 z-0">
                   <path d="M104.562 109.034C116.316 98.4192 123.573 83.7173 124.851 67.9317C126.128 52.1461 121.33 36.4684 111.436 24.1019C101.543 11.7354 87.3002 3.61358 71.6191 1.39586C55.9379 -0.82187 40.0017 3.03193 27.0667 12.1698C14.1316 21.3077 5.17403 35.04 2.02417 50.5608C-1.1257 66.0816 1.76991 82.2194 10.1193 95.6769C18.4688 109.134 31.6418 118.896 46.9469 122.966C62.252 127.037 78.5339 125.11 92.4658 117.579L83.0294 100.123C73.5468 105.249 62.4647 106.56 52.0475 103.79C41.6302 101.019 32.6642 94.3749 26.9812 85.2153C21.2982 76.0556 19.3274 65.0715 21.4713 54.5075C23.6152 43.9434 29.7121 34.5967 38.5162 28.3771C47.3203 22.1575 58.1671 19.5344 68.8403 21.0439C79.5135 22.5534 89.2075 28.0814 95.9416 36.4985C102.676 44.9157 105.942 55.5865 105.072 66.3308C104.202 77.0751 99.2628 87.0818 91.2627 94.3063L104.562 109.034Z" fill="white" fillOpacity="0.07"/>
                 </svg>
@@ -90,7 +94,7 @@ const SearchDomain = () => {
                     <path d="M9.875 16.2656V6.26562H2.875V16.2656H9.875ZM9.875 4.26562V1.26562C9.875 0.713345 10.3227 0.265625 10.875 0.265625H19.875C20.4273 0.265625 20.875 0.713345 20.875 1.26562V17.2656C20.875 17.8179 20.4273 18.2656 19.875 18.2656H1.875C1.32272 18.2656 0.875 17.8179 0.875 17.2656V5.26562C0.875 4.71335 1.32272 4.26562 1.875 4.26562H9.875ZM11.875 2.26562V16.2656H18.875V2.26562H11.875ZM3.875 13.2656H8.875V15.2656H3.875V13.2656ZM12.875 13.2656H17.875V15.2656H12.875V13.2656ZM12.875 10.2656H17.875V12.2656H12.875V10.2656ZM12.875 7.26562H17.875V9.26562H12.875V7.26562ZM3.875 10.2656H8.875V12.2656H3.875V10.2656Z" fill="white"/>
                   </svg>
                 </div>
-                <div className="flex flex-col justify-between ml-9 w-[346px] h-[125px] gap-2.5 z-10">
+                <div className="flex flex-col justify-between ml-9 sm:w-[180px] sm:h-[] md:w-[250px] md:h-[80px] lg:w-[346px] lg:h-[125px] gap-2.5 z-10">
                   <div className="text-white text-lg font-northura mb-1">Get new domain</div>
                   <div className="text-[#D1D5F6] text-sm font-korolev">Find the perfect domain name using quick search from our range of available extensions</div>
                   <button
@@ -105,7 +109,7 @@ const SearchDomain = () => {
                 </div>
               </div>
               {/* Transfer Now Card (top right) */}
-              <div className="relative flex flex-row items-center w-[524px] h-[151px] rounded-[15.94px] bg-[#23295A] px-8 py-6 overflow-hidden col-start-2 row-start-1">
+              <div className="relative flex flex-row items-center w-full lg:h-[151px] rounded-[15.94px] bg-[#23295A] px-1 py-2 lg:px-8 lg:py-6 overflow-hidden col-start-2 row-start-1">
                 <svg width="126" height="53" viewBox="0 0 126 53" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute right-0 bottom-0 z-0">
                   <path d="M104.562 109.034C116.316 98.4192 123.573 83.7173 124.851 67.9317C126.128 52.1461 121.33 36.4684 111.436 24.1019C101.543 11.7354 87.3002 3.61358 71.6191 1.39586C55.9379 -0.82187 40.0017 3.03193 27.0667 12.1698C14.1316 21.3077 5.17403 35.04 2.02417 50.5608C-1.1257 66.0816 1.76991 82.2194 10.1193 95.6769C18.4688 109.134 31.6418 118.896 46.9469 122.966C62.252 127.037 78.5339 125.11 92.4658 117.579L83.0294 100.123C73.5468 105.249 62.4647 106.56 52.0475 103.79C41.6302 101.019 32.6642 94.3749 26.9812 85.2153C21.2982 76.0556 19.3274 65.0715 21.4713 54.5075C23.6152 43.9434 29.7121 34.5967 38.5162 28.3771C47.3203 22.1575 58.1671 19.5344 68.8403 21.0439C79.5135 22.5534 89.2075 28.0814 95.9416 36.4985C102.676 44.9157 105.942 55.5865 105.072 66.3308C104.202 77.0751 99.2628 87.0818 91.2627 94.3063L104.562 109.034Z" fill="white" fillOpacity="0.07"/>
                 </svg>
@@ -114,7 +118,7 @@ const SearchDomain = () => {
                     <path d="M9 0L17.2169 1.82598C17.6745 1.92766 18 2.33347 18 2.80217V12.7889C18 14.795 16.9974 16.6684 15.3282 17.7812L9 22L2.6718 17.7812C1.00261 16.6684 0 14.795 0 12.7889V2.80217C0 2.33347 0.32553 1.92766 0.78307 1.82598L9 0ZM9 2.04879L2 3.60434V12.7889C2 14.1263 2.6684 15.3752 3.7812 16.1171L9 19.5963L14.2188 16.1171C15.3316 15.3752 16 14.1263 16 12.7889V3.60434L9 2.04879ZM13.4524 7.22183L14.8666 8.63604L8.5026 15L4.25999 10.7574L5.67421 9.3431L8.5019 12.1709L13.4524 7.22183Z" fill="white"/>
                   </svg>
                 </div>
-                <div className="flex flex-col justify-between ml-8 w-[346px] h-[125px] gap-2.5 z-10">
+                <div className="flex flex-col justify-between ml-0 lg:ml-8 w-[346px] h-[125px] gap-2.5 z-10">
                   <div className="text-white text-lg font-northura mb-1">Transfer your domain into Nameword</div>
                   <div className="text-[#D1D5F6] text-sm font-korolev">Easily transfer your existing domain with our fast and secure services</div>
                   <button
@@ -129,7 +133,7 @@ const SearchDomain = () => {
                 </div>
               </div>
               {/* Avatars Card (bottom left) */}
-              <div className="relative w-[330px] h-[116px] rounded-[20px] bg-[#23295A] flex flex-col items-center justify-center overflow-hidden col-start-1 row-start-2 z-10">
+              <div className="relative flex flex-row items-center w-full lg:h-[116px] rounded-[20px] bg-[#23295A] flex flex-col items-center justify-center overflow-hidden col-start-1 row-start-2 z-10">
                 {/* Blue dot inside bottom-left */}
                 <span className="absolute left-3 bottom-3 w-[12px] h-[12px] rounded-full bg-[#3E239E]" />
                 {/* Green dot outside bottom-left */}
@@ -150,7 +154,7 @@ const SearchDomain = () => {
                 <div className="mt-3 text-white text-base font-korolev text-center">several customers around the world</div>
               </div>
               {/* Domain Input Card (bottom right) */}
-              <div className="relative w-[524px] h-[64px] rounded-[50px] bg-[#23295A] flex flex-row items-center px-6 overflow-visible col-start-2 row-start-2 z-10">
+              <div className="relative flex flex-row items-center w-full lg:h-[151px] rounded-[50px] bg-[#23295A] flex flex-row items-center px-6 overflow-visible col-start-2 row-start-2 z-10">
                 {/* Search icon */}
                 <svg width="24" height="24" fill="none" viewBox="0 0 24 24" className="text-white">
                   <circle cx="11" cy="11" r="8" stroke="white" strokeWidth="2"/>
@@ -159,7 +163,7 @@ const SearchDomain = () => {
                 <span className="ml-3 text-white text-lg font-korolev">https://example</span>
               </div>
               {/* Carlos badge absolutely positioned outside the input card */}
-              <div style={{ position: 'absolute', width: '104px', height: '62px', top: '259px', left: '760px', opacity: 1, borderRadius: '24px', zIndex: 30 }}>
+              <div className='hidden lg:block' style={{ position: 'absolute', width: '104px', height: '62px', top: '259px', left: '760px', opacity: 1, borderRadius: '24px', zIndex: 30 }}>
                 <svg width="104" height="62" viewBox="0 0 104 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_d_8366_273900)">
                     <path d="M11.8924 23.7116L7.33378 7.72003C7.0984 6.89431 7.95602 6.18128 8.73584 6.55434L23.8385 13.7794C24.6416 14.1636 24.5812 15.3161 23.7425 15.6133L17.5312 17.8141C17.3056 17.894 17.1164 18.0513 16.9978 18.2576L13.7318 23.9363C13.2908 24.7031 12.1347 24.5618 11.8924 23.7116Z" fill="#039855"/>
@@ -182,33 +186,8 @@ const SearchDomain = () => {
                   </defs>
                 </svg>
               </div>
-              {/* Hexagon and Dotted Lines (absolutely positioned between bottom cards) */}
-              <div className="pointer-events-none absolute" style={{ width: '56px', height: '66px', top: '245px', left: '424px', opacity: 1, zIndex: 0, transform: 'none' }}>
-                {/* Dotted SVG from avatars to hexagon */}
-                <svg width="200" height="107" viewBox="0 0 202 110" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute left-[-170px] top-[-10px] z-20">
-                  <path d="M1 69.5002C1 69.5002 17.0219 107.682 38 108.5C59.8004 109.35 57.2002 76.0842 78 69.5002C104.787 61.0211 85.9033 101.499 114 101.5C149 101.501 125 -19.9993 201.5 4.00021" stroke="white" strokeOpacity="0.36" strokeWidth="1.5" strokeDasharray="10 10"/>
-                </svg>
-                {/* SVG Hexagon with centered logo */}
-                <div className="relative flex items-center justify-center w-full h-full">
-                  <svg width="56" height="66" viewBox="0 0 56 66" fill="none" xmlns="http://www.w3.org/2000/svg" className='rounded-xl'>
-                    <polygon points="28,6 52,19 52,47 28,60 4,47 4,19" fill="#3C4067" stroke="#3C4067" strokeWidth="2" style={{ filter: 'blur(0.5px)' }} strokeLinejoin="round" strokeLinecap="round"/>
-                  </svg>
-                  <span className="absolute flex items-center justify-center w-full h-full">
-                    <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg" className="mx-auto my-auto">
-                      <path d="M2 0V16H18V18H0V0H2ZM16.9393 2.93934L19.0607 5.06066L13 11.1213L10 8.121L6.06066 12.0607L3.93934 9.9393L10 3.87868L13 6.879L16.9393 2.93934Z" fill="white"/>
-                    </svg>
-                  </span>
-                </div>
-                {/* Dotted SVG from hexagon to domain input */}
-                <svg width="66" height="56" viewBox="0 0 66 56" fill="none" xmlns="http://www.w3.org/2000/svg" className='absolute right-[-50px] top-[-0px] z-20'>
-                  <path d="M64.5 38C64.5 38 42.2695 60.1853 28.5 53.5C14.6958 46.7979 28.0668 27.4979 18.5 15.5C12.9481 8.53719 0.5 1.5 0.5 1.5" stroke="white" strokeOpacity="0.36" strokeWidth="1.5" strokeDasharray="10 10"/>
-                </svg>
-              </div>
-              {/* Rectangle decorations below domain input card */}
-              <div style={{ position: 'absolute', width: '149px', height: '9px', top: '307px', left: '574px', borderRadius: '10px', background: '#4F5375', opacity: 1, zIndex: 20 }} />
-              <div style={{ position: 'absolute', width: '99px', height: '9px', top: '332px', left: '574px', borderRadius: '10px', background: '#4F5375', opacity: 1, zIndex: 20 }} />
-            </div>
-        </div>
+             </div>
+          </div>
 
       </div>
     </div>

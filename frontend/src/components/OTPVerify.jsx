@@ -7,9 +7,11 @@ const OTPVerify = () => {
   const [email, setEmail] = useState("");
   const navigate = useNavigate();
   return (
-    <div className="w-[1440px] min-h-screen bg-gradient-to-br from-[rgba(94,48,204,0.05)] to-[rgba(9,135,255,0.05)] flex flex-col items-center relative">
+    <div className="w-full min-h-screen bg-gradient-to-br from-[rgba(94,48,204,0.05)] to-[rgba(9,135,255,0.05)] flex flex-col items-center relative
+                    xl:w-[1440px] xl:mx-auto">
       {/* Top Bar */}
-      <div className="flex justify-between items-center w-[1376px] h-6 mt-6 absolute left-1/2 -translate-x-1/2 top-0 z-20">
+      <div className="flex justify-between items-center w-full h-6 mt-6 absolute left-1/2 -translate-x-1/2 top-0 z-20 px-4
+                      xl:w-[1376px] xl:px-0">
         <span className="text-base font-bold text-[#1C1E40]">Nameword</span>
         <button className="flex items-center gap-2 text-[#1C1E40] text-base font-medium hover:underline" onClick={()=> navigate('/signup')}>
           <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
@@ -20,15 +22,21 @@ const OTPVerify = () => {
       </div>
 
       {/* Map + OTP Card Section */}
-      <div className="relative w-[1376px] h-[471px] mt-[240px]">
-        {/* Map Image */}
+      <div className="relative w-full h-auto mt-[80px] px-4 flex flex-col items-center
+                      md:mt-[120px] md:px-6
+                      xl:w-[1376px] xl:h-[471px] xl:mt-[240px] xl:px-0">
+        {/* Map Image - Hidden on mobile, shown on tablet and desktop */}
         <img
           src={mapBaseImg}
           alt="Map Background"
-          className="block w-full h-full object-contain rounded-[24px]"
+          className="hidden md:block w-full h-[300px] object-contain rounded-[24px]
+                     xl:h-full xl:rounded-[24px]"
         />
+        
         {/* OTP Card */}
-        <div className="absolute left-1/2 -translate-x-1/2 top-[-20px] flex flex-col w-[553px] h-[585px] bg-white rounded-[32px] shadow-lg z-10 pt-[40px] pr-[24px] pl-[24px] pb-[40px] gap-[85px] items-center">
+        <div className="w-full max-w-[400px] bg-white rounded-[32px] shadow-lg z-10 pt-[40px] pr-[24px] pl-[24px] pb-[40px] gap-[40px] items-center flex flex-col
+                        md:absolute md:left-1/2 md:-translate-x-1/2 md:top-[-20px] md:max-w-[500px] md:gap-[60px]
+                        xl:w-[553px] xl:h-[585px] xl:gap-[85px] xl:max-w-none">
           {/* Verification Section */}
           <div className="flex flex-col items-center w-full">
             {/* Icon */}
@@ -100,7 +108,8 @@ const OTPVerify = () => {
           {/* Button Section */}
           <div className="w-full flex flex-col items-center">
             <button
-              className="w-[505px] h-[56px] rounded-full bg-gradient-to-r from-[#9664E6] to-[#5E30CC] text-white font-medium text-base leading-4 hover:opacity-90 transition-opacity"
+              className="w-full h-[56px] rounded-full bg-gradient-to-r from-[#9664E6] to-[#5E30CC] text-white font-medium text-base leading-4 hover:opacity-90 transition-opacity
+                         xl:w-[505px]"
               onClick={()=> navigate('/otpenter')}
             >
               Get code →

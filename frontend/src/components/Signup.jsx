@@ -42,7 +42,8 @@ const RegisterComponent = () => {
   return (
     <main className="w-full bg-white">
       {/* Header/Navigation Bar */}
-      <header className="w-full h-[80px] flex items-center justify-between px-[72px] bg-gradient-to-r from-[#1B1F4B] to-[#2B2F6D] relative z-10">
+      <header className="w-full h-[80px] flex items-center justify-between px-4 sm:px-8 lg:px-[72px] bg-gradient-to-r from-[#1B1F4B] to-[#2B2F6D] relative z-10">
+        
         {/* Logo */}
         <div className="flex items-center">
           <svg width="168" height="38" viewBox="0 0 168 38" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,8 +58,9 @@ const RegisterComponent = () => {
             <path d="M165.356 28.5688L164.876 27.6552C164.508 28.2575 163.888 28.5688 162.784 28.5688H159.788C157.896 28.5688 156.568 27.542 156.568 25.4843V17.6013C156.568 15.1758 158.436 14.0601 160.636 14.0601H164.508V9.80327C164.508 9.51624 164.648 9.37476 164.932 9.37476H166.768C167.052 9.37476 167.192 9.52029 167.192 9.80327V28.1403C167.192 28.4273 167.052 28.5688 166.768 28.5688H165.356ZM164.508 16.4573H161.06C159.76 16.4573 159.252 17.1728 159.252 18.0824V24.4252C159.252 25.1407 159.508 25.5975 159.876 25.8239C160.216 26.0786 160.696 26.1675 161.12 26.1675H163.212C164.004 26.1675 164.512 25.739 164.512 24.9386V16.4573H164.508Z" fill="white"/>
           </svg>
         </div>
-        {/* Navigation buttons */}
-        <div className="flex gap-2 p-2 bg-[#1c204c] rounded-full">
+
+        {/* Navigation buttons - Hidden on mobile */}
+        <div className="hidden md:flex gap-2 p-2 bg-[#1c204c] rounded-full">
           {navItems.map((item, index) => (
             <button
               key={index}
@@ -71,6 +73,13 @@ const RegisterComponent = () => {
               {item.label}
             </button>
           ))}
+        </div>
+
+        {/* Login button for mobile */}
+        <div className="md:hidden">
+          <button className="px-4 py-2 bg-white bg-opacity-20 text-white rounded-full font-medium text-sm">
+            Login
+          </button>
         </div>
       </header>
 

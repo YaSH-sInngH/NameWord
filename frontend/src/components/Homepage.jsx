@@ -20,7 +20,7 @@ const Homepage = () => {
       <Navbar />
       {/* Hero Section */}
       <section
-        className="relative flex flex-col items-center w-full max-w-[1440px] mx-auto md:h-[1048px] bg-[#3E239E] rounded-b-[56px] pt-[206px] pr-[146px] pl-[146px] gap-[10px] overflow-hidden"
+        className="relative flex flex-col items-center w-full max-w-[90rem] 2xl:max-w-[100%] mx-auto md:h-[65.5rem] bg-[#3E239E] rounded-b-[56px] pt-[20px] lg:pt-[180px] xl:pt-[206px] pr-[146px] pl-[146px] gap-[10px] overflow-hidden"
       >
         {/* SVG Background */}
         <svg
@@ -38,37 +38,37 @@ const Homepage = () => {
           />
         </svg>
         {/* Hero Content */}
-        <div className="w-full flex flex-col items-center">
-          <h1 className="text-4xl md:text-6xl font-northuraLight text-center mb-8 leading-tight">Looking For The Perfect <br className="hidden md:block" />Domain?</h1>
-          <p className="text-center text-sm font-korolevLight mb-8 max-w-xl mx-auto">Nameword is trusted by businesses and brands that value online credibility</p>
-          <div className="flex items-center justify-between w-[564px] h-[69px] bg-white border border-[#E0E0E0] rounded-[50px] pl-[16px] pr-[4px] py-[4px] gap-2 shadow-[0_8px_32px_0_rgba(62,35,158,0.15)] mb-6">
+        <div className="w-[180px] lg:w-full flex flex-col items-center ">
+          <h1 className="text-2xl md:text-6xl font-northuraLight text-center mb-8 leading-tight">Looking For The Perfect <br className="hidden md:block" />Domain?</h1>
+          <p className="text-center text-sm font-korolevLight mb-8 mx-auto">Nameword is trusted by businesses and brands that value online credibility</p>
+          <div className="flex items-center justify-between lg:w-[100%] relative h-[51px] lg:h-[69px] bg-white border border-[#E0E0E0] rounded-[50px] pl-[16px] pr-[4px] py-[4px] gap-2 shadow-[0_8px_32px_0_rgba(62,35,158,0.15)] mb-0 lg:mb-6">
               {/* Search Icon */}
               <svg className="mr-1" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <circle cx="11" cy="11" r="8" stroke="#B0B0B0" strokeWidth="2"/>
                 <path d="M21 21l-4.35-4.35" stroke="#B0B0B0" strokeWidth="2" strokeLinecap="round"/>
               </svg>
               <input
-                className="flex-1 bg-transparent outline-none text-[#8B8B8B] placeholder-[#8B8B8B] text-sm font-korolevLight"
+                className="flex-1 bg-transparent outline-none text-[#8B8B8B] placeholder-[#8B8B8B] text-xs lg:text-sm font-korolevLight"
                 placeholder="Search your dream domain name or keyword..."
               />
               <button
-                className="flex items-center justify-center w-[159px] h-[61px] rounded-full px-[36px] py-[22px] font-korolevHeavy text-white text-sm transition bg-gradient-to-r from-[#3E239E] to-[#8B7BC5] shadow-md"
+                className="flex items-center justify-center w-[91px] lg:w-[159px] h-[31px] lg:h-[61px] rounded-full px-[36px] py-[22px] font-korolevHeavy text-white text-xs lg:text-sm transition bg-gradient-to-r from-[#3E239E] to-[#8B7BC5] shadow-md"
               >
                 Search Now
               </button>
           </div>
           {/* Home Card Container: 2x2 grid for all four cards */}
           <div
-            className="relative w-[1128px] h-auto mt-[122px] ml-[10px] rounded-tl-[24px] rounded-tr-[24px] bg-[#0C1141] shadow-[0px_-2px_64px_0px_#2745BE14] overflow-visible flex flex-col justify-between px-8 py-6"
+            className="relative md:w-[720px] xl:w-[1128px] h-auto mt-[20px] lg:[mt-122px] xl:mt-[122px] ml-[10px] rounded-tl-[24px] rounded-tr-[24px] bg-[#0C1141] shadow-[0px_-2px_64px_0px_#2745BE14] overflow-visible flex flex-col justify-between px-8 py-6"
             style={{
               border: '1.2px solid',
               borderImage: `linear-gradient(0deg, rgba(255,255,255,0.16), rgba(255,255,255,0.16)), conic-gradient(from 0deg at 50% 2.74%, #FFFFFF 0deg, rgba(255,255,255,0) 87.28deg, rgba(255,255,255,0) 271.8deg, #FFFFFF 360deg) 1`,
               borderImageSlice: 1,
             }}
           >
-            <div className="w-full grid grid-cols-2 grid-rows-2 gap-x-6 gap-y-8">
+            <div className="w-full flex flex-col lg:grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-x-2 md:gap-x-6 gap-y-4 md:gap-y-8">
               {/* Get Domain Card (top left) */}
-              <div className="relative flex flex-row items-center w-[524px] h-[151px] rounded-[15.94px] bg-[#23295A] px-8 py-6 overflow-hidden col-start-1 row-start-1">
+              <div className="relative flex flex-row items-center w-full lg:h-[151px] rounded-[15.94px] bg-[#23295A] px-1 py-2 lg:px-8 lg:py-6 overflow-hidden col-start-1 row-start-1">
                 <svg width="126" height="53" viewBox="0 0 126 53" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute right-0 bottom-0 z-0">
                   <path d="M104.562 109.034C116.316 98.4192 123.573 83.7173 124.851 67.9317C126.128 52.1461 121.33 36.4684 111.436 24.1019C101.543 11.7354 87.3002 3.61358 71.6191 1.39586C55.9379 -0.82187 40.0017 3.03193 27.0667 12.1698C14.1316 21.3077 5.17403 35.04 2.02417 50.5608C-1.1257 66.0816 1.76991 82.2194 10.1193 95.6769C18.4688 109.134 31.6418 118.896 46.9469 122.966C62.252 127.037 78.5339 125.11 92.4658 117.579L83.0294 100.123C73.5468 105.249 62.4647 106.56 52.0475 103.79C41.6302 101.019 32.6642 94.3749 26.9812 85.2153C21.2982 76.0556 19.3274 65.0715 21.4713 54.5075C23.6152 43.9434 29.7121 34.5967 38.5162 28.3771C47.3203 22.1575 58.1671 19.5344 68.8403 21.0439C79.5135 22.5534 89.2075 28.0814 95.9416 36.4985C102.676 44.9157 105.942 55.5865 105.072 66.3308C104.202 77.0751 99.2628 87.0818 91.2627 94.3063L104.562 109.034Z" fill="white" fillOpacity="0.07"/>
                 </svg>
@@ -83,7 +83,7 @@ const Homepage = () => {
                     <path d="M9.875 16.2656V6.26562H2.875V16.2656H9.875ZM9.875 4.26562V1.26562C9.875 0.713345 10.3227 0.265625 10.875 0.265625H19.875C20.4273 0.265625 20.875 0.713345 20.875 1.26562V17.2656C20.875 17.8179 20.4273 18.2656 19.875 18.2656H1.875C1.32272 18.2656 0.875 17.8179 0.875 17.2656V5.26562C0.875 4.71335 1.32272 4.26562 1.875 4.26562H9.875ZM11.875 2.26562V16.2656H18.875V2.26562H11.875ZM3.875 13.2656H8.875V15.2656H3.875V13.2656ZM12.875 13.2656H17.875V15.2656H12.875V13.2656ZM12.875 10.2656H17.875V12.2656H12.875V10.2656ZM12.875 7.26562H17.875V9.26562H12.875V7.26562ZM3.875 10.2656H8.875V12.2656H3.875V10.2656Z" fill="white"/>
                   </svg>
                 </div>
-                <div className="flex flex-col justify-between ml-9 w-[346px] h-[125px] gap-2.5 z-10">
+                <div className="flex flex-col justify-between ml-9 sm:w-[180px] sm:h-[] md:w-[250px] md:h-[80px] lg:w-[346px] lg:h-[125px] gap-2.5 z-10">
                   <div className="text-white text-lg font-northura mb-1">Get new domain</div>
                   <div className="text-[#D1D5F6] text-sm font-korolev">Find the perfect domain name using quick search from our range of available extensions</div>
                   <button
@@ -98,7 +98,7 @@ const Homepage = () => {
                 </div>
               </div>
               {/* Transfer Now Card (top right) */}
-              <div className="relative flex flex-row items-center w-[524px] h-[151px] rounded-[15.94px] bg-[#23295A] px-8 py-6 overflow-hidden col-start-2 row-start-1">
+              <div className="relative flex flex-row items-center w-full lg:h-[151px] rounded-[15.94px] bg-[#23295A] px-1 py-2 lg:px-8 lg:py-6 overflow-hidden col-start-2 row-start-1">
                 <svg width="126" height="53" viewBox="0 0 126 53" fill="none" xmlns="http://www.w3.org/2000/svg" className="absolute right-0 bottom-0 z-0">
                   <path d="M104.562 109.034C116.316 98.4192 123.573 83.7173 124.851 67.9317C126.128 52.1461 121.33 36.4684 111.436 24.1019C101.543 11.7354 87.3002 3.61358 71.6191 1.39586C55.9379 -0.82187 40.0017 3.03193 27.0667 12.1698C14.1316 21.3077 5.17403 35.04 2.02417 50.5608C-1.1257 66.0816 1.76991 82.2194 10.1193 95.6769C18.4688 109.134 31.6418 118.896 46.9469 122.966C62.252 127.037 78.5339 125.11 92.4658 117.579L83.0294 100.123C73.5468 105.249 62.4647 106.56 52.0475 103.79C41.6302 101.019 32.6642 94.3749 26.9812 85.2153C21.2982 76.0556 19.3274 65.0715 21.4713 54.5075C23.6152 43.9434 29.7121 34.5967 38.5162 28.3771C47.3203 22.1575 58.1671 19.5344 68.8403 21.0439C79.5135 22.5534 89.2075 28.0814 95.9416 36.4985C102.676 44.9157 105.942 55.5865 105.072 66.3308C104.202 77.0751 99.2628 87.0818 91.2627 94.3063L104.562 109.034Z" fill="white" fillOpacity="0.07"/>
                 </svg>
@@ -107,7 +107,7 @@ const Homepage = () => {
                     <path d="M9 0L17.2169 1.82598C17.6745 1.92766 18 2.33347 18 2.80217V12.7889C18 14.795 16.9974 16.6684 15.3282 17.7812L9 22L2.6718 17.7812C1.00261 16.6684 0 14.795 0 12.7889V2.80217C0 2.33347 0.32553 1.92766 0.78307 1.82598L9 0ZM9 2.04879L2 3.60434V12.7889C2 14.1263 2.6684 15.3752 3.7812 16.1171L9 19.5963L14.2188 16.1171C15.3316 15.3752 16 14.1263 16 12.7889V3.60434L9 2.04879ZM13.4524 7.22183L14.8666 8.63604L8.5026 15L4.25999 10.7574L5.67421 9.3431L8.5019 12.1709L13.4524 7.22183Z" fill="white"/>
                   </svg>
                 </div>
-                <div className="flex flex-col justify-between ml-8 w-[346px] h-[125px] gap-2.5 z-10">
+                <div className="flex flex-col justify-between ml-0 lg:ml-8 w-[346px] h-[125px] gap-2.5 z-10">
                   <div className="text-white text-lg font-northura mb-1">Transfer your domain into Nameword</div>
                   <div className="text-[#D1D5F6] text-sm font-korolev">Easily transfer your existing domain with our fast and secure services</div>
                   <button
@@ -122,7 +122,7 @@ const Homepage = () => {
                 </div>
               </div>
               {/* Avatars Card (bottom left) */}
-              <div className="relative w-[330px] h-[116px] rounded-[20px] bg-[#23295A] flex flex-col items-center justify-center overflow-hidden col-start-1 row-start-2 z-10">
+              <div className="relative flex flex-row items-center w-full lg:h-[116px] rounded-[20px] bg-[#23295A] flex flex-col items-center justify-center overflow-hidden col-start-1 row-start-2 z-10">
                 {/* Blue dot inside bottom-left */}
                 <span className="absolute left-3 bottom-3 w-[12px] h-[12px] rounded-full bg-[#3E239E]" />
                 {/* Green dot outside bottom-left */}
@@ -143,7 +143,7 @@ const Homepage = () => {
                 <div className="mt-3 text-white text-base font-korolev text-center">several customers around the world</div>
               </div>
               {/* Domain Input Card (bottom right) */}
-              <div className="relative w-[524px] h-[64px] rounded-[50px] bg-[#23295A] flex flex-row items-center px-6 overflow-visible col-start-2 row-start-2 z-10">
+              <div className="relative flex flex-row items-center w-full lg:h-[151px] rounded-[50px] bg-[#23295A] flex flex-row items-center px-6 overflow-visible col-start-2 row-start-2 z-10">
                 {/* Search icon */}
                 <svg width="24" height="24" fill="none" viewBox="0 0 24 24" className="text-white">
                   <circle cx="11" cy="11" r="8" stroke="white" strokeWidth="2"/>
@@ -152,7 +152,7 @@ const Homepage = () => {
                 <span className="ml-3 text-white text-lg font-korolev">https://example</span>
               </div>
               {/* Carlos badge absolutely positioned outside the input card */}
-              <div style={{ position: 'absolute', width: '104px', height: '62px', top: '259px', left: '760px', opacity: 1, borderRadius: '24px', zIndex: 30 }}>
+              <div className='hidden lg:block' style={{ position: 'absolute', width: '104px', height: '62px', top: '259px', left: '760px', opacity: 1, borderRadius: '24px', zIndex: 30 }}>
                 <svg width="104" height="62" viewBox="0 0 104 62" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <g filter="url(#filter0_d_8366_273900)">
                     <path d="M11.8924 23.7116L7.33378 7.72003C7.0984 6.89431 7.95602 6.18128 8.73584 6.55434L23.8385 13.7794C24.6416 14.1636 24.5812 15.3161 23.7425 15.6133L17.5312 17.8141C17.3056 17.894 17.1164 18.0513 16.9978 18.2576L13.7318 23.9363C13.2908 24.7031 12.1347 24.5618 11.8924 23.7116Z" fill="#039855"/>
@@ -203,19 +203,12 @@ const Homepage = () => {
             </div>
           </div>
         </div>
-        {/* Add Create Free Account button below or above as per Figma */}
-        <button
-          className="mt-6 px-8 py-3 rounded-full bg-gradient-to-r from-[#3E239E] to-[#8B7BC5] text-white text-lg font-northuraHeavy hover:shadow-lg transform hover:scale-[1.02] transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-[#3E239E] focus:ring-offset-2"
-          onClick={() => navigate('/signup')}
-        >
-          Create Free Account
-        </button>
       </section>
 
       
       {/* Features Section */}
       <section
-      className="responsive-section relative flex flex-col items-center justify-center w-full mx-auto bg-white xl:max-w-[1440px] xl:h-[895px] xl:pt-[80px] xl:pr-[180px] xl:pb-[80px] xl:pl-[180px] xl:gap-[22px] lg:py-[70px] lg:px-[60px] lg:gap-[30px] md:py-[60px] md:px-[40px] md:gap-[28px] py-[40px] px-[20px] gap-[32px]"
+      className="responsive-section relative flex flex-col items-center justify-center w-full mx-auto bg-white xl:max-w-[90rem] 2xl:max-w-[100%] xl:h-[895px] xl:pt-[80px] xl:pr-[180px] xl:pb-[80px] xl:pl-[180px] xl:gap-[22px] lg:py-[70px] lg:px-[60px] lg:gap-[30px] md:py-[60px] md:px-[40px] md:gap-[28px] py-[40px] px-[20px] gap-[32px]"
       style={{
         height: 'auto'
       }}
@@ -313,7 +306,7 @@ const Homepage = () => {
       
       
       {/* Pricing Section (Figma Spec) */}
-      <section className="w-full max-w-[1440px] mx-auto flex flex-col items-center justify-center bg-white relative pt-10 md:pt-16 lg:pt-20 pr-4 md:pr-8 lg:pr-[72px] pb-10 md:pb-16 lg:pb-20 pl-4 md:pl-8 lg:pl-[72px] gap-8 md:gap-12 lg:gap-16 min-h-[400px] md:min-h-[500px] lg:h-[662px]">
+      <section className="w-full max-w-[90rem] 2xl:max-w-[100%] mx-auto flex flex-col items-center justify-center bg-white relative pt-10 md:pt-16 lg:pt-20 pr-4 md:pr-8 lg:pr-[72px] pb-10 md:pb-16 lg:pb-20 pl-4 md:pl-8 lg:pl-[72px] gap-8 md:gap-12 lg:gap-16 min-h-[400px] md:min-h-[500px] lg:h-[662px]">
       {/* Title */}
       <div className="w-full flex justify-center">
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-black text-center px-4">
@@ -410,7 +403,7 @@ const Homepage = () => {
       
       {/* Popular Domains Section */}
       <section
-      className="relative w-full max-w-[1440px] mx-auto flex flex-col items-center justify-center bg-white"
+      className="relative w-full max-w-[90rem] 2xl:max-w-[100%] mx-auto flex flex-col items-center justify-center bg-white"
       style={{
         height: 'auto',
         opacity: 1,
@@ -648,7 +641,7 @@ const Homepage = () => {
       
       
       {/* How it Works Section */}
-      <section className="relative w-full max-w-[1440px] mx-auto bg-[#4227A2] rounded-tl-[56px] rounded-tr-[56px] flex flex-col items-center justify-center overflow-visible pt-[40px] md:pt-[60px] xl:pt-[80px] px-4 md:px-8 lg:px-16 xl:px-[296px] pb-[40px] md:pb-[60px] xl:pb-[80px] gap-[32px] md:gap-[48px] xl:gap-[64px] min-h-[600px] md:min-h-[680px] xl:h-[760px] opacity-100">
+      <section className="relative w-full max-w-[90rem] 2xl:max-w-[100%] mx-auto bg-[#4227A2] rounded-tl-[56px] rounded-tr-[56px] flex flex-col items-center justify-center overflow-visible pt-[40px] md:pt-[60px] xl:pt-[80px] px-4 md:px-8 lg:px-16 xl:px-[296px] pb-[40px] md:pb-[60px] xl:pb-[80px] gap-[32px] md:gap-[48px] xl:gap-[64px] min-h-[600px] md:min-h-[680px] xl:h-[760px] opacity-100">
       
       {/* Left Dotted SVG - Hidden on mobile and tablet */}
       <div className="hidden xl:block absolute left-0 top-1/2 -translate-y-1/2 z-0">
@@ -705,7 +698,7 @@ const Homepage = () => {
       </div>
 
       {/* Top Text */}
-      <div className="w-full max-w-[848px] flex flex-col items-center justify-center gap-[16px] md:gap-[20px] xl:gap-[24px] mb-4 md:mb-6 xl:mb-8">
+      <div className="w-full max-w-[1293px] flex flex-col items-center justify-center gap-[16px] md:gap-[20px] xl:gap-[24px] mb-4 md:mb-6 xl:mb-8">
         <h2 className="text-2xl md:text-3xl xl:text-4xl font-northuraHeavy text-white text-center">How it works</h2>
         <p className="text-sm md:text-base xl:text-base font-korolevLight text-white text-center max-w-[90%] md:max-w-full">You want to build your brand identity – here are the steps ahead</p>
       </div>
@@ -714,39 +707,39 @@ const Homepage = () => {
       <div className="w-full max-w-[1293px] flex flex-col md:flex-col lg:flex-row items-center justify-center gap-[24px] md:gap-[28px] xl:gap-[32px] mt-4 md:mt-6 xl:mt-8">
         
         {/* Card 1 */}
-        <div className="w-[280px] md:w-[320px] xl:w-[296px] h-[240px] md:h-[260px] xl:h-[272px] bg-[#3E239E] rounded-[24px] flex flex-col items-center pt-8 pb-6 px-6 relative shadow-lg" style={{ boxShadow: '0px 50px 80px 0px #9664E640' }}>
+        <div className="w-full flex-1 min-w-0 h-[240px] md:h-[260px] lg:h-[272px] bg-[#3E239E] rounded-[24px] flex flex-col items-center pt-8 pb-6 px-6 relative shadow-lg" style={{ boxShadow: '0px 50px 80px 0px #9664E640' }}>
           <div className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] xl:w-[64px] xl:h-[64px] bg-white rounded-full flex items-center justify-center absolute -top-6 xl:-top-8 left-1/2 -translate-x-1/2">
             <span className="text-[#4227A2] text-xl md:text-2xl xl:text-2xl font-bold">1</span>
           </div>
-          <h3 className="mt-8 md:mt-10 xl:mt-12 text-lg md:text-xl xl:text-xl font-northuraHeavy text-white text-center">Find your perfect domain</h3>
-          <p className="mt-3 md:mt-4 xl:mt-4 text-xs md:text-sm xl:text-sm font-korolevLight text-white text-center leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <h3 className="w-full mt-8 md:mt-10 xl:mt-12 text-lg md:text-xl xl:text-xl font-northuraHeavy text-white text-center">Find your perfect domain</h3>
+          <p className="line-clamp-3 mt-3 md:mt-4 xl:mt-4 text-xs md:text-sm xl:text-sm font-korolevLight text-white text-center leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
 
         {/* Card 2 */}
-        <div className="w-[280px] md:w-[320px] xl:w-[280px] h-[240px] md:h-[260px] xl:h-[280px] bg-[#3E239E] rounded-[24px] flex flex-col items-center pt-8 pb-6 px-6 relative shadow-lg" style={{ boxShadow: '0px 50px 80px 0px #9664E640' }}>
+        <div className="w-full flex-1 min-w-0 h-[240px] md:h-[260px] lg:h-[272px] bg-[#3E239E] rounded-[24px] flex flex-col items-center pt-8 pb-6 px-6 relative shadow-lg" style={{ boxShadow: '0px 50px 80px 0px #9664E640' }}>
           <div className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] xl:w-[64px] xl:h-[64px] bg-white rounded-full flex items-center justify-center absolute -top-6 xl:-top-8 left-1/2 -translate-x-1/2">
             <span className="text-[#4227A2] text-xl md:text-2xl xl:text-2xl font-bold">2</span>
           </div>
           <h3 className="mt-8 md:mt-10 xl:mt-12 text-lg md:text-xl xl:text-xl font-northuraHeavy text-white text-center">Accommodation</h3>
-          <p className="mt-3 md:mt-4 xl:mt-4 text-xs md:text-sm xl:text-sm font-korolevLight text-white text-center leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p className="line-clamp-3 mt-3 md:mt-4 xl:mt-4 text-xs md:text-sm xl:text-sm font-korolevLight text-white text-center leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
 
         {/* Card 3 */}
-        <div className="w-[280px] md:w-[320px] xl:w-[280px] h-[240px] md:h-[260px] xl:h-[280px] bg-[#3E239E] rounded-[24px] flex flex-col items-center pt-8 pb-6 px-6 relative shadow-lg" style={{ boxShadow: '0px 50px 80px 0px #9664E640' }}>
+        <div className="w-full flex-1 min-w-0 h-[240px] md:h-[260px] lg:h-[272px] bg-[#3E239E] rounded-[24px] flex flex-col items-center pt-8 pb-6 px-6 relative shadow-lg" style={{ boxShadow: '0px 50px 80px 0px #9664E640' }}>
           <div className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] xl:w-[64px] xl:h-[64px] bg-white rounded-full flex items-center justify-center absolute -top-6 xl:-top-8 left-1/2 -translate-x-1/2">
             <span className="text-[#4227A2] text-xl md:text-2xl xl:text-2xl font-bold">3</span>
           </div>
           <h3 className="mt-8 md:mt-10 xl:mt-12 text-lg md:text-xl xl:text-xl font-northuraHeavy text-white text-center">Add SSL certificate</h3>
-          <p className="mt-3 md:mt-4 xl:mt-4 text-xs md:text-sm xl:text-sm font-korolevLight text-white text-center leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p className="line-clamp-3 mt-3 md:mt-4 xl:mt-4 text-xs md:text-sm xl:text-sm font-korolevLight text-white text-center leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
 
         {/* Card 4 */}
-        <div className="w-[280px] md:w-[320px] xl:w-[280px] h-[240px] md:h-[260px] xl:h-[280px] bg-[#3E239E] rounded-[24px] flex flex-col items-center pt-8 pb-6 px-6 relative shadow-lg" style={{ boxShadow: '0px 50px 80px 0px #9664E640' }}>
+        <div className="flex-1 min-w-0 h-[240px] md:h-[260px] lg:h-[272px] bg-[#3E239E] rounded-[24px] flex flex-col items-center pt-8 pb-6 px-6 relative shadow-lg" style={{ boxShadow: '0px 50px 80px 0px #9664E640' }}>
           <div className="w-[48px] h-[48px] md:w-[56px] md:h-[56px] xl:w-[64px] xl:h-[64px] bg-white rounded-full flex items-center justify-center absolute -top-6 xl:-top-8 left-1/2 -translate-x-1/2">
             <span className="text-[#4227A2] text-xl md:text-2xl xl:text-2xl font-bold">4</span>
           </div>
           <h3 className="mt-8 md:mt-10 xl:mt-12 text-lg md:text-xl xl:text-xl font-northuraHeavy text-white text-center">Website design</h3>
-          <p className="mt-3 md:mt-4 xl:mt-4 text-xs md:text-sm xl:text-sm font-korolevLight text-white text-center leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p className="line-clamp-3 mt-3 md:mt-4 xl:mt-4 text-xs md:text-sm xl:text-sm font-korolevLight text-white text-center leading-relaxed">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
 
       </div>
@@ -754,7 +747,7 @@ const Homepage = () => {
       
 
       {/* Brands Section */}
-      <section className="w-full max-w-[1440px] mx-auto h-auto min-h-[783px] flex flex-col lg:flex-row items-center justify-center relative gap-[24px] px-4 py-8 lg:py-0 lg:px-0">
+      <section className="w-full max-w-[90rem] 2xl:max-w-[100%] mx-auto h-auto min-h-[783px] flex flex-col lg:flex-row items-center justify-center relative gap-[24px] px-4 py-8 lg:py-0 lg:px-0">
       {/* Left: Main image with floating cards */}
       <div className="relative w-full max-w-[665px] h-[400px] sm:h-[500px] md:h-[550px] lg:w-[665px] lg:h-[623px] flex items-center justify-center">
         <img src={girlImg} alt="Brand" className="w-full h-full object-cover rounded-[32px]" />
@@ -813,7 +806,7 @@ const Homepage = () => {
       
 
       {/* Find your Domain Section */}
-      <section className="w-full max-w-[1440px] mx-auto h-auto min-h-[658px] flex flex-col lg:flex-row items-center justify-center relative gap-[24px] px-4 lg:px-0 py-8 lg:py-0">
+      <section className="w-full max-w-[90rem] 2xl:max-w-[100%] mx-auto h-auto min-h-[658px] flex flex-col lg:flex-row items-center justify-center relative gap-[24px] px-4 lg:px-0 py-8 lg:py-0">
       {/* Left: Use domainImg (image2.png) for the illustration */}
       <div className="w-full max-w-[665px] h-[300px] sm:h-[400px] lg:h-[498px] flex items-center justify-center order-2 lg:order-1">
         <img src={domainImg} alt="Find your domain illustration" className="w-full h-full object-contain" />
@@ -832,7 +825,7 @@ const Homepage = () => {
       </section>
 
       {/* Bestsellers Section */}
-      <section className="w-full max-w-[1440px] h-auto min-h-[726px] flex flex-col justify-between gap-[32px] md:gap-[64px] px-[16px] sm:px-[32px] md:px-[48px] lg:px-[72px] pt-[40px] md:pt-[80px] pb-[40px] md:pb-[80px] opacity-100 mx-auto">
+      <section className="w-full max-w-[90rem] 2xl:max-w-[100%] h-auto min-h-[726px] flex flex-col justify-between gap-[32px] md:gap-[64px] px-[16px] sm:px-[32px] md:px-[48px] lg:px-[72px] pt-[40px] md:pt-[80px] pb-[40px] md:pb-[80px] opacity-100 mx-auto">
       {/* Heading Content */}
       <div className="w-full max-w-[653px] h-auto flex flex-col gap-[16px] md:gap-[24px] opacity-100 mx-auto items-center text-center">
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-thin font-northuraExpanded text-black">
@@ -890,9 +883,9 @@ const Homepage = () => {
 
       {/* Web & Email Hosting Section */}
       <section className="
-      /* 1440px+ screens - original design */
-      w-full max-w-[1440px] min-h-[1022px] 
+      w-full max-w-[90rem] min-h-[1022px] 
       xl:h-[1022px] xl:px-[143px] xl:pt-[80px] 
+      2xl:max-w-[100%]
       
       /* Large screens (1200px-1439px) */
       lg:px-[100px] lg:pt-[70px] lg:min-h-[900px]
@@ -963,7 +956,6 @@ const Homepage = () => {
 
       {/* Main Content Container */}
       <div className="
-        /* 1440px+ screens - original design */
         xl:w-[1154px] xl:h-[497px] 
         
         /* Large screens */
@@ -1082,7 +1074,7 @@ const Homepage = () => {
       {/* Bottom Content: Images in grid with rounded background */}
       <div className="
         xl:w-[1154px] xl:h-[381px] 
-        lg:w-full lg:max-w-[1000px] lg:h-auto
+        lg:w-full lg:max-w-[1084px] lg:h-auto
         md:w-full md:h-auto
         w-full h-auto
         relative mx-auto flex items-end justify-center
@@ -1130,7 +1122,7 @@ const Homepage = () => {
 
 
       {/* Pro Website Designs Section */}
-      <section className="w-full max-w-[1440px] h-auto min-h-[832px] xl:h-[832px] flex flex-col xl:flex-row items-center gap-6 md:gap-12 xl:gap-[74px] rounded-br-[56px] rounded-bl-[56px] bg-[#020738] opacity-100 mx-auto px-4 md:px-8 xl:px-0 py-8 xl:py-0">
+      <section className="w-full max-w-[90rem] 2xl:max-w-[100%] h-auto min-h-[832px] xl:h-[832px] flex flex-col xl:flex-row items-center gap-6 md:gap-12 xl:gap-[74px] rounded-br-[56px] rounded-bl-[56px] bg-[#020738] opacity-100 mx-auto px-4 md:px-8 xl:px-0 py-8 xl:py-0">
       {/* Left: Image with floating cards */}
       <div className="relative w-full max-w-[823px] h-[400px] md:h-[500px] xl:h-[612px] xl:ml-auto order-2 xl:order-1">
         <img src={kleberImg} alt="Kleber" className="w-full h-full object-cover rounded-tr-[40px] rounded-bl-[40px]" />
@@ -1139,7 +1131,7 @@ const Homepage = () => {
         <img 
           src={newImg} 
           alt="Kleber label" 
-          className="absolute" 
+          className="absolute hidden lg:block " 
           style={{ 
             width: '100px', 
             height: '60px', 
@@ -1163,7 +1155,7 @@ const Homepage = () => {
         
         {/* Floating domain card - responsive positioning */}
         <div 
-          className="absolute" 
+          className="absolute hidden lg:block " 
           style={{ 
             width: '180px', 
             height: '170px', 
@@ -1205,9 +1197,9 @@ const Homepage = () => {
       </section>
 
 
-    {/* Why nameword? Section */}
-    <section
-        className="relative flex flex-col items-center w-full max-w-[1440px] mx-auto gap-8 sm:gap-[40px] md:gap-[64px] pt-8 sm:pt-[40px] md:pt-[80px] px-4 sm:px-6 md:px-[40px] lg:px-[144px] pb-8 sm:pb-[40px] md:pb-[80px] opacity-100"
+      {/* Why nameword? Section */}
+      <section
+        className="relative flex flex-col items-center w-full max-w-[90rem] 2xl:max-w-[100%] mx-auto gap-8 sm:gap-[40px] md:gap-[64px] pt-8 sm:pt-[40px] md:pt-[80px] px-4 sm:px-6 md:px-[40px] lg:px-[144px] pb-8 sm:pb-[40px] md:pb-[80px] opacity-100"
         style={{ background: '#fff' }}
       >
         {/* Content */}
@@ -1228,7 +1220,7 @@ const Homepage = () => {
           </div>
 
           {/* Cards and Dotted Lines */}
-          <div className="relative w-full max-w-[1152px] h-[420px] sm:h-[450px] flex items-center justify-center mt-2">
+          <div className="relative w-full max-w-[72rem] h-[420px] sm:h-[450px] flex items-center justify-center mt-2">
             {/* Map background */}
             <img
               src={mapImg}
@@ -1286,14 +1278,14 @@ const Homepage = () => {
             {/* You can add SVG lines here with responsive classes if needed */}
           </div>
         </div>
-    </section>
+      </section>
 
-      
       
       {/* Testimonials Section */}
+          
 
       {/* Ready to Elevate Your Online Presence Section */}
-      <section className="relative w-full flex justify-center items-center py-20 px-16 lg:px-16 md:px-8 sm:px-4" style={{ background: '#fff' }}>  
+      <section className="relative w-full 2xl:max-w-[100%] flex justify-center items-center py-20 px-16 lg:px-16 md:px-8 sm:px-4" style={{ background: '#fff' }}>  
         {/* N SVG Background */}
         <div className="absolute left-0 top-0 z-20 pointer-events-none lg:block md:hidden sm:hidden" style={{ width: 352, height: 436 }}>
           <img src={NImg} alt="" style={{ width: '100%', height: '100%', objectFit: 'contain' }} />

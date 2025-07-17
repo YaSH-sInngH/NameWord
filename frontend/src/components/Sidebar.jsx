@@ -41,26 +41,53 @@ const sidebarItems = [
 const Sidebar = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  return(
-    <aside className="fixed top-[80px] left-0 w-[250px] h-[944px] bg-white p-6 flex flex-col gap-5 shadow-sm z-10">
-      <nav className="flex flex-col gap-5">
-      {sidebarItems.map((item, idx) => {
-        const isActive = location.pathname === item.route;
-        return (
-          <div
-            key={item.label}
-            className={`flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer transition-colors ${isActive ? "bg-[#F7F7FC] text-[#5E30CC] font-semibold" : "text-[#1C1E40] hover:bg-[#F7F7FC]"}`}
-            onClick={() => navigate(item.route)}
-          >
-            {item.icon}
-            <span className="text-base">{item.label}</span>
-          </div>
-        );
-      })}
+  const [open, setOpen] = React.useState(true);
+  return (
+    <>
+      {/* Desktop & Tablet Sidebar */}
+      <aside className="hidden lg:flex fixed top-[80px] left-0 w-[220px] md:w-[250px] h-[calc(100vh-80px)] bg-white p-4 md:p-6 flex-col gap-5 shadow-sm z-10 transition-transform duration-300 md:translate-x-0 " style={{ transform: open ? 'translateX(0)' : 'translateX(-100%)' }}>
+        {/* Collapse button for tablet */}
+        <button className="lg:hidden absolute -right-6 top-4 bg-[#5E30CC] text-white rounded-full w-8 h-8 flex items-center justify-center" onClick={() => setOpen(false)}>
+          <span className="text-lg">×</span>
+        </button>
+        <nav className="flex flex-col gap-5 mt-8 md:mt-0">
+          {sidebarItems.map((item) => {
+            const isActive = location.pathname === item.route;
+            return (
+              <div
+                key={item.label}
+                className={`flex items-center gap-3 px-3 py-2 rounded-lg cursor-pointer transition-colors ${isActive ? "bg-[#F7F7FC] text-[#5E30CC] font-semibold" : "text-[#1C1E40] hover:bg-[#F7F7FC]"}`}
+                onClick={() => navigate(item.route)}
+              >
+                {item.icon}
+                <span className="text-base">{item.label}</span>
+              </div>
+            );
+          })}
+        </nav>
+      </aside>
+      {/* Sidebar open button for tablet */}
+      <button className="lg:hidden fixed top-[90px] left-2 z-20 bg-[#5E30CC] text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg" onClick={() => setOpen(true)} style={{ display: open ? 'none' : 'flex' }}>
+        <svg width="24" height="24" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      {/* Mobile Bottom Nav */}
+      <nav className="fixed lg:hidden bottom-0 left-0 w-full bg-white border-t border-gray-200 flex justify-around items-center h-16 z-20 shadow-t">
+        {sidebarItems.slice(0,5).map((item) => {
+          const isActive = location.pathname === item.route;
+          return (
+            <button
+              key={item.label}
+              className={`flex flex-col items-center justify-center px-2 py-1 text-xs ${isActive ? "text-[#5E30CC] font-semibold" : "text-[#1C1E40]"}`}
+              onClick={() => navigate(item.route)}
+            >
+              <span className="w-5 h-5 flex items-center justify-center">{item.icon}</span>
+              <span className="mt-1">{item.label.split(' ')[0]}</span>
+            </button>
+          );
+        })}
       </nav>
-    </aside>
-  )
-
+    </>
+  );
 };
 
 export default Sidebar; 

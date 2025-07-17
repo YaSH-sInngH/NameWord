@@ -125,58 +125,52 @@ const TransferDomain = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="relative min-h-screen w-full bg-[#F7F7FC]" style={{ minWidth: 1440}}>
+    <div className="relative min-h-screen bg-[#F7F7FC]">
       <NewNavbar activeSection="Domains" />
-      <div>
-        {/* Sidebar - fixed */}
-        <div className="fixed top-[80px] left-0 w-[250px] h-[calc(100vh-80px)] z-20 bg-[#F7F7FC]">
-          <NewSidebar />
-        </div>
-        {/* Main Content - scrollable */}
-        <div className="ml-[250px] h-[calc(100vh-80px)] overflow-y-auto">
-          <main className="bg-[#F9FAFC] rounded-[24px] flex flex-col gap-8 shadow-sm p-8" style={{ minHeight: 1104, maxWidth: 1190 }}>
-            <h1 className="text-3xl font-bold text-[#1C1E40] mb-6">Transfers</h1>
-            {/* Info Card */}
-            <div className="w-full bg-white rounded-[16px] p-6 flex items-center gap-4 mb-6" style={{ width: 1126, minHeight: 80 }} onClick={()=> navigate('/transferlist')}>
-              <span className="flex items-center justify-center w-12 h-12 rounded-full bg-[#F7F3FF]">
-                <svg width="28" height="28" fill="none" viewBox="0 0 28 28"><rect width="28" height="28" rx="8" fill="#7C3AED" fillOpacity="0.12"/><path d="M8 14H20M14 8V20" stroke="#7C3AED" strokeWidth="2" strokeLinecap="round"/></svg>
-              </span>
-              <div className="flex flex-col">
-                <span className="font-semibold text-base text-[#1C1E40]">Transfer domain to Nameword</span>
-                <span className="text-sm text-[#6B7280]">Domain transfer is the process of moving a website’s address from one provider to another</span>
-              </div>
+      <NewSidebar />
+      <main className="lg:ml-[250px] px-4 sm:px-6 lg:px-8 pb-10">
+        <div className="max-w-[1188px] mx-auto">
+          <div className="pt-6 lg:pt-10 mb-6 lg:mb-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-[#1C1E40] mb-2">Transfers</h1>
+          </div>
+          {/* Info Card */}
+          <div className="bg-white rounded-[12px] lg:rounded-[16px] p-4 sm:p-5 lg:p-6 flex items-center gap-4 mb-6 cursor-pointer" onClick={()=> navigate('/transferlist')}>
+            <span className="flex items-center justify-center w-12 h-12 rounded-full bg-[#F7F3FF]">
+              <svg width="28" height="28" fill="none" viewBox="0 0 28 28"><rect width="28" height="28" rx="8" fill="#7C3AED" fillOpacity="0.12"/><path d="M8 14H20M14 8V20" stroke="#7C3AED" strokeWidth="2" strokeLinecap="round"/></svg>
+            </span>
+            <div className="flex flex-col">
+              <span className="font-semibold text-base text-[#1C1E40]">Transfer domain to Nameword</span>
+              <span className="text-sm text-[#6B7280]">Domain transfer is the process of moving a website's address from one provider to another</span>
             </div>
-            {/* How it works */}
-            <div className="w-full bg-white rounded-[16px] p-8 flex flex-col gap-8 mb-6" style={{ width: 1126}}>
-              <div className="text-2xl font-semibold text-[#1C1E40] h-[90px] flex items-center">How it works?</div>
-              <div className='w-[1126px] h-[380px] flex items-center justify-center'>
-                <div className="flex flex-row items-start justify-between gap-2 w-[1083px] h-[260px]">
-                    {howItWorks.map((step) => (
-                    <div key={step.step} className="flex flex-col items-center text-center flex-1 gap-2">
-                        <div className="mb-2">{step.icon}</div>
-                        <span className="text-3xl font-bold text-[#7C3AED] mb-1">{step.step}</span>
-                        <span className="font-semibold text-base text-[#1C1E40] mb-1">{step.title}</span>
-                        <span className="text-sm text-[#6B7280]">{step.desc}</span>
-                    </div>
-                    ))}
+          </div>
+          {/* How it works */}
+          <div className="bg-white rounded-[12px] lg:rounded-[16px] p-4 sm:p-5 lg:p-8 flex flex-col gap-8 mb-6">
+            <div className="text-lg sm:text-xl md:text-2xl font-semibold text-[#1C1E40] flex items-center mb-4">How it works?</div>
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+              {howItWorks.map((step) => (
+                <div key={step.step} className="flex flex-col items-center text-center flex-1 gap-2">
+                  <div className="mb-2">{step.icon}</div>
+                  <span className="text-3xl font-bold text-[#7C3AED] mb-1">{step.step}</span>
+                  <span className="font-semibold text-base text-[#1C1E40] mb-1">{step.title}</span>
+                  <span className="text-sm text-[#6B7280]">{step.desc}</span>
                 </div>
-              </div>
+              ))}
             </div>
-            {/* Transfer List */}
-            <div className="w-full bg-white rounded-[16px] p-6 flex flex-col gap-4" style={{ width: 1126, minHeight: 204 }}>
-              <div className="text-xl font-semibold text-[#1C1E40] mb-4">Transfer list</div>
-              <div className="bg-[#F9FAFC] rounded-[50px] px-4 py-3 flex items-center border border-[#EAEAEA] w-full">
-                <span className="pr-4">
-                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.16797 0.666016C12.308 0.666016 15.668 4.02602 15.668 8.16602C15.668 12.306 12.308 15.666 8.16797 15.666C4.02797 15.666 0.667969 12.306 0.667969 8.16602C0.667969 4.02602 4.02797 0.666016 8.16797 0.666016ZM8.16797 13.9993C11.3909 13.9993 14.0013 11.3889 14.0013 8.16602C14.0013 4.9431 11.3909 2.33268 8.16797 2.33268C4.94505 2.33268 2.33464 4.9431 2.33464 8.16602C2.33464 11.3889 4.94505 13.9993 8.16797 13.9993ZM15.2391 14.0586L17.5961 16.4156L16.4176 17.5941L14.0606 15.2371L15.2391 14.0586Z" fill="#7C3AED"/>
-                  </svg>
-                </span>
-                <input type="text" placeholder="Search" className="flex-1 bg-transparent outline-none text-[#1C1E40] text-base" />
-              </div>
+          </div>
+          {/* Transfer List */}
+          <div className="bg-white rounded-[12px] lg:rounded-[16px] p-4 sm:p-5 lg:p-6 flex flex-col gap-4">
+            <div className="text-lg sm:text-xl font-semibold text-[#1C1E40] mb-4">Transfer list</div>
+            <div className="bg-[#F9FAFC] rounded-[50px] px-4 py-3 flex items-center border border-[#EAEAEA] w-full mb-4">
+              <span className="pr-4">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8.16797 0.666016C12.308 0.666016 15.668 4.02602 15.668 8.16602C15.668 12.306 12.308 15.666 8.16797 15.666C4.02797 15.666 0.667969 12.306 0.667969 8.16602C0.667969 4.02602 4.02797 0.666016 8.16797 0.666016ZM8.16797 13.9993C11.3909 13.9993 14.0013 11.3889 14.0013 8.16602C14.0013 4.9431 11.3909 2.33268 8.16797 2.33268C4.94505 2.33268 2.33464 4.9431 2.33464 8.16602C2.33464 11.3889 4.94505 13.9993 8.16797 13.9993ZM15.2391 14.0586L17.5961 16.4156L16.4176 17.5941L14.0606 15.2371L15.2391 14.0586Z" fill="#7C3AED"/>
+                </svg>
+              </span>
+              <input type="text" placeholder="Search" className="flex-1 bg-transparent outline-none text-[#1C1E40] text-base" />
             </div>
-          </main>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };

@@ -316,30 +316,30 @@ export const PrivacyPolicyComplete = () => {
   ];
 
   return (
-    <div className="w-[1440px] bg-[#f9fafc]">
+    <div className="w-full max-w-[1440px] mx-auto bg-[#f9fafc]">
       <div className="relative w-full">
         {/* Header Section */}
-                <NewNavbar />
+        <NewNavbar />
 
         {/* Main Heading */}
-        <div className="w-full pr-10 pl-10">
-          <div className="flex flex-col gap-8 pt-5 pb-8 px-4 md:px-8 rounded-2xl overflow-hidden border border-[#eaeaea] bg-white my-6">
-            <h1 className="text-3xl font-bold text-black mb-2 font-northuraExpanded">Nameword Privacy Policy</h1>
+        <div className="w-full px-4 sm:px-6 md:px-8 lg:px-10">
+          <div className="flex flex-col gap-6 md:gap-8 pt-4 md:pt-5 pb-6 md:pb-8 px-4 md:px-8 rounded-2xl overflow-hidden border border-[#eaeaea] bg-white my-4 md:my-6">
+            <h1 className="text-2xl md:text-3xl font-bold text-black mb-2 font-northuraExpanded">Nameword Privacy Policy</h1>
             <div className="p-0">
-              <div className="flex flex-col gap-8">
+              <div className="flex flex-col gap-6 md:gap-8">
                 {sections.map((section, sectionIndex) => (
                   <section
                     key={`section-${sectionIndex}`}
-                    className="flex flex-col gap-8"
+                    className="flex flex-col gap-6 md:gap-8"
                   >
                     {section.title && (
-                      <h2 className="font-bold text-black text-2xl leading-6 mt-[-1px] font-korolev">
+                      <h2 className="font-bold text-black text-xl md:text-2xl leading-5 md:leading-6 mt-[-1px] font-korolev">
                         {section.title}
                       </h2>
                     )}
 
                     {section.description && (
-                      <p className="font-medium text-black text-base leading-[20.8px] font-korolev">
+                      <p className="font-medium text-black text-sm md:text-base leading-[18px] md:leading-[20.8px] font-korolev">
                         {section.description}
                       </p>
                     )}
@@ -348,10 +348,10 @@ export const PrivacyPolicyComplete = () => {
                       section.subsections.map((subsection, subsectionIndex) => (
                         <div
                           key={`subsection-${sectionIndex}-${subsectionIndex}`}
-                          className="flex flex-col gap-6"
+                          className="flex flex-col gap-4 md:gap-6"
                         >
                           {subsection.subtitle && (
-                            <h3 className="font-medium text-black text-lg leading-[18px] mt-[-1px] font-korolev">
+                            <h3 className="font-medium text-black text-base md:text-lg leading-4 md:leading-[18px] mt-[-1px] font-korolev">
                               <li>{subsection.subtitle} </li>
                             </h3>
                           )}
@@ -360,9 +360,9 @@ export const PrivacyPolicyComplete = () => {
                             subsection.content.map((contentItem, contentIndex) => (
                               <div
                                 key={`content-${sectionIndex}-${subsectionIndex}-${contentIndex}`}
-                                className={`${subsection.indented ? "pl-6" : ""}`}
+                                className={`${subsection.indented ? "pl-4 md:pl-6" : ""}`}
                               >
-                                <p className="text-[#505050] text-base leading-[20.8px] font-korolev">
+                                <p className="text-[#505050] text-sm md:text-base leading-[18px] md:leading-[20.8px] font-korolev">
                                   {contentItem.label && (
                                     <span className="font-medium">
                                       {contentItem.label}
@@ -394,22 +394,22 @@ export const PrivacyPolicyComplete = () => {
 
           {/* Help Section */}
           <section className="w-full p-0">
-            <div className="border border-[#eaeaea] rounded-2xl overflow-hidden bg-white my-6">
-              <div className="p-6 flex items-center gap-6">
-                <div className="w-10 h-10 bg-white rounded-lg overflow-hidden shadow-[17px_15px_32px_#04162d14] flex items-center justify-center">
+            <div className="border border-[#eaeaea] rounded-2xl overflow-hidden bg-white my-4 md:my-6">
+              <div className="p-4 md:p-6 flex flex-col sm:flex-row items-start sm:items-center gap-4 md:gap-6">
+                <div className="w-10 h-10 bg-white rounded-lg overflow-hidden shadow-[17px_15px_32px_#04162d14] flex items-center justify-center flex-shrink-0">
                   <HelpCircleIcon className="w-5 h-5 text-black" />
                 </div>
 
                 <div className="flex flex-col items-start gap-2 flex-1">
-                  <h3 className="font-medium text-black text-lg leading-[21.6px] font-sans">
+                  <h3 className="font-medium text-black text-base md:text-lg leading-[19.2px] md:leading-[21.6px] font-sans">
                     Need help? We're always here for you.
                   </h3>
-                  <p className="text-[#505050] text-base leading-6 font-normal font-sans">
+                  <p className="text-[#505050] text-sm md:text-base leading-5 md:leading-6 font-normal font-sans">
                     Our team's here to help — anytime, with anything.
                   </p>
                 </div>
 
-                <button className="px-5 py-4 rounded-[100px] bg-[linear-gradient(90deg,rgba(150,100,230,1)_0%,rgba(94,48,204,1)_100%)] text-white font-medium text-base leading-4 hover:opacity-90 transition-opacity">
+                <button className="w-full sm:w-auto px-4 md:px-5 py-3 md:py-4 rounded-[100px] bg-[linear-gradient(90deg,rgba(150,100,230,1)_0%,rgba(94,48,204,1)_100%)] text-white font-medium text-sm md:text-base leading-4 hover:opacity-90 transition-opacity">
                   Go To Live Chat
                 </button>
               </div>

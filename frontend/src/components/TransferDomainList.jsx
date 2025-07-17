@@ -134,62 +134,57 @@ const whyData = [
 
 const TransferDomainList = () => {
   return (
-    <div className="relative min-h-screen w-full bg-[#F7F7FC]" style={{ minWidth: 1440}}>
+    <div className="relative min-h-screen bg-[#F7F7FC]">
       <NewNavbar activeSection="Domains" />
-      <div>
-        {/* Sidebar - fixed */}
-        <div className="fixed top-[80px] left-0 w-[250px] h-[calc(100vh-80px)] z-20 bg-[#F7F7FC]">
-          <NewSidebar />
-        </div>
-        {/* Main Content - scrollable */}
-        <div className="ml-[250px] h-[calc(100vh-80px)] overflow-y-auto">
-          <main className="bg-[#F9FAFC] rounded-[24px] flex flex-col gap-8 shadow-sm p-8" style={{ minHeight: 1114, maxWidth: 1190 }}>
-            {/* 1. Heading */}
-            <h1 className="text-3xl font-bold text-[#1C1E40] mb-4">Transfer Domain</h1>
-            {/* 2. Three Cards */}
-            <div className="flex flex-row gap-6 w-full mb-4" style={{ width: 1126 }}>
-              {cardData.map((card, idx) => (
-                <div key={idx} className="flex flex-col bg-white rounded-[16px] p-6 gap-2 flex-1 border border-[#EAEAEA] min-h-[120px]">
-                  <div className="mb-2">{card.icon}</div>
-                  <span className="font-semibold text-base text-[#1C1E40] mb-1">{card.title}</span>
-                  <span className="text-sm text-[#6B7280]">{card.desc}</span>
+      <NewSidebar />
+      <main className="lg:ml-[250px] px-4 sm:px-6 lg:px-8 pb-10">
+        <div className="max-w-[1188px] mx-auto">
+          <div className="pt-6 lg:pt-10 mb-6 lg:mb-8">
+            <h1 className="text-2xl md:text-3xl font-bold text-[#1C1E40] mb-2">Transfer Domain</h1>
+          </div>
+          {/* Three Cards */}
+          <div className="flex flex-col md:flex-row gap-6 w-full mb-4">
+            {cardData.map((card, idx) => (
+              <div key={idx} className="flex flex-col bg-white rounded-[12px] lg:rounded-[16px] p-4 sm:p-5 lg:p-6 gap-2 flex-1 border border-[#EAEAEA] min-h-[120px]">
+                <div className="mb-2">{card.icon}</div>
+                <span className="font-semibold text-base text-[#1C1E40] mb-1">{card.title}</span>
+                <span className="text-sm text-[#6B7280]">{card.desc}</span>
+              </div>
+            ))}
+          </div>
+          {/* List Section */}
+          <div className="bg-white rounded-[12px] lg:rounded-[16px] flex flex-col gap-4 p-4 sm:p-5 lg:p-6 mb-4">
+            <div className="text-lg sm:text-xl font-semibold text-[#1C1E40] mb-2">Transfer list</div>
+            <div className="flex flex-col md:flex-row items-center gap-4 mb-4">
+              <input type="text" placeholder="Enter a domain for transfer" className="flex-1 bg-[#F9FAFC] rounded-full px-6 py-3 outline-none border border-[#EAEAEA] text-base" />
+              <button className="bg-[#7C3AED] text-white rounded-full px-6 py-2 font-semibold">Transfer</button>
+            </div>
+            <div className="flex flex-col md:flex-row gap-6 justify-between border-[#EAEAEA] pt-4">
+              {domainList.map((item, idx) => (
+                <div key={idx} className="flex flex-col items-center flex-1 border-l border-slate-400 first:border-l-0">
+                  <span className="text-xl font-bold text-[#7C3AED]">{item.tld}</span>
+                  <span className="text-base text-[#1C1E40]">{item.price}</span>
                 </div>
               ))}
             </div>
-            {/* 3. List Section */}
-            <div className="bg-white rounded-[16px] flex flex-col gap-4 p-6 mb-4" style={{ width: 1126, height: 302 }}>
-              <div className="text-xl font-semibold text-[#1C1E40] mb-2">Transfer list</div>
-              <div className="flex flex-row items-center gap-4 mb-4">
-                <input type="text" placeholder="Enter a domain for transfer" className="flex-1 bg-[#F9FAFC] rounded-full px-6 py-3 outline-none border border-[#EAEAEA] text-base" />
-                <button className="bg-[#7C3AED] text-white rounded-full px-6 py-2 font-semibold">Transfer</button>
-              </div>
-              <div className="flex flex-row gap-6 justify-between border-[#EAEAEA] pt-4">
-                {domainList.map((item, idx) => (
-                  <div key={idx} className="flex flex-col items-center flex-1 border-l border-slate-400">
-                    <span className="text-xl font-bold text-[#7C3AED]">{item.tld}</span>
-                    <span className="text-base text-[#1C1E40]">{item.price}</span>
+          </div>
+          {/* Why Transfer Section */}
+          <div className="bg-white rounded-[12px] lg:rounded-[16px] flex flex-col gap-6 p-4 sm:p-5 lg:p-8">
+            <div className="text-lg sm:text-xl font-semibold text-[#1C1E40] mb-4">Why transfer to Nameword?</div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {whyData.map((item, idx) => (
+                <div key={idx} className="flex flex-row items-start gap-4 bg-[#F9FAFC] rounded-[12px] p-4">
+                  <div>{item.icon}</div>
+                  <div className="flex flex-col">
+                    <span className="font-semibold text-base text-[#1C1E40] mb-1">{item.title}</span>
+                    <span className="text-sm text-[#6B7280]">{item.desc}</span>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
-            {/* 4. Why Transfer Section */}
-            <div className="bg-white rounded-[16px] flex flex-col gap-6 p-8" style={{ width: 1126, height: 402 }}>
-              <div className="text-xl font-semibold text-[#1C1E40] mb-4">Why transfer to Nameword?</div>
-              <div className="grid grid-cols-2 gap-6">
-                {whyData.map((item, idx) => (
-                  <div key={idx} className="flex flex-row items-start gap-4 bg-[#F9FAFC] rounded-[12px] p-4">
-                    <div>{item.icon}</div>
-                    <div className="flex flex-col">
-                      <span className="font-semibold text-base text-[#1C1E40] mb-1">{item.title}</span>
-                      <span className="text-sm text-[#6B7280]">{item.desc}</span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </main>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };

@@ -5,7 +5,7 @@ const Footer = () => {
     <footer className="w-full bg-[#3E239E] text-white" style={{ opacity: 1 }}>
       {/* Main Content Container */}
       <div
-        className="flex flex-col md:flex-row items-center md:items-start justify-between pt-8 sm:pt-12 md:pt-[80px] lg:pt-[120px] px-4 sm:px-8 md:px-[40px] lg:px-[72px] pb-8 sm:pb-12 md:pb-[120px] lg:pb-[320px] gap-8 sm:gap-10 md:gap-[60px] lg:gap-[120px] xl:gap-[39px] max-w-[95vw] md:max-w-[900px] lg:max-w-[1100px] xl:max-w-[1296px] mx-auto"
+        className="flex flex-col md:flex-row items-center md:items-start justify-between pt-8 sm:pt-12 md:pt-[80px] lg:pt-[120px] px-[20px] lg:px-[72px] pb-8 sm:pb-12 md:pb-[120px] lg:pb-[320px] gap-8 sm:gap-10 md:gap-[20px] lg:gap-[120px] xl:gap-[39px] max-w-[95vw] md:max-w-[900px] lg:max-w-[1100px] xl:max-w-[1296px] mx-auto"
         style={{ width: '100%', opacity: 1 }}
       >
         {/* Brand/Info */}
@@ -37,7 +37,7 @@ const Footer = () => {
           </div>
         </div>
         {/* Links Columns */}
-        <div className="flex flex-col md:flex-row flex-1 w-full md:justify-between gap-6 sm:gap-8 md:gap-0 md:min-w-[400px] lg:min-w-[600px] xl:min-w-[687px] md:max-w-[700px] lg:max-w-[900px] xl:max-w-[687px] md:h-[208px]">
+        <div className="flex flex-col md:flex-row flex-1 w-full md:justify-between gap-0 lg:gap-8 md:max-w-[700px] lg:max-w-[900px] xl:max-w-[687px] md:h-[208px]">
           {/* NameWord Links */}
           <div className="flex flex-col items-center md:items-start min-w-[120px] sm:min-w-[140px] md:min-w-[150px] w-full">
             <span className="text-sm sm:text-base md:text-lg font-semibold mb-2 md:mb-4">NameWord</span>
@@ -60,9 +60,9 @@ const Footer = () => {
             </ul>
           </div>
           {/* Socials */}
-          <div className="flex flex-col items-center md:items-start min-w-[140px] sm:min-w-[160px] md:min-w-[180px] w-full mt-4 md:mt-0">
-            <span className="text-sm sm:text-base md:text-lg font-semibold mb-2 md:mb-4">Follow NameWord</span>
-            <ul className="space-y-2 sm:space-y-3 md:space-y-4 text-xs sm:text-sm text-slate-400 text-korolev">
+          <div className="flex flex-col items-center md:items-start w-[5rem] md:min-w-[8rem] w-full lg:mt-4 md:mt-0">
+            <span className="text-sm sm:text-base md:text-lg font-semibold mb-2 md:mb-4">Follow Namewords</span>
+            <ul className="space-y-2 sm:space-y-3 md:space-y-4 text-xs lg:text-sm text-slate-400 text-korolev">
               <li className="flex items-center gap-2 sm:gap-2 md:gap-3"><svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M15.3362 15.5392H12.6707V11.3624C12.6707 10.3664 12.6505 9.08469 11.2817 9.08469C9.892 9.08469 9.6797 10.1685 9.6797 11.2889V15.5392H7.0142V6.9502H9.5747V8.1209H9.6092C9.967 7.4459 10.837 6.73345 12.1367 6.73345C14.8375 6.73345 15.337 8.511 15.337 10.8247L15.3362 15.5392ZM4.00373 5.77495C3.14573 5.77495 2.45648 5.08045 2.45648 4.2262C2.45648 3.3727 3.14648 2.67895 4.00373 2.67895C4.85873 2.67895 5.55173 3.3727 5.55173 4.2262C5.55173 5.08045 4.85798 5.77495 4.00373 5.77495ZM5.34023 15.5392H2.66723V6.9502H5.34023V15.5392ZM16.6697 0.200195H1.32923C0.594976 0.200195 0.000976562 0.780695 0.000976562 1.49695V16.9035C0.000976562 17.6204 0.594976 18.2002 1.32923 18.2002H16.6675C17.401 18.2002 18.001 17.6204 18.001 16.9035V1.49695C18.001 0.780695 17.401 0.200195 16.6675 0.200195H16.6697Z" fill="#ABAEC9"/>
                 </svg>

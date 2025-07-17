@@ -29,11 +29,11 @@ const sidebarLinks = [
         <path d="M0.667969 8.99983C0.667969 8.27942 0.759385 7.58033 0.93126 6.91359C1.83982 6.96069 2.7417 6.50846 3.2278 5.66652C3.71353 4.82521 3.65469 3.81892 3.16064 3.05584C4.15425 2.07941 5.39157 1.35018 6.77299 0.967773C7.18647 1.77821 8.02905 2.33318 9.0013 2.33318C9.97355 2.33318 10.8161 1.77821 11.2296 0.967773C12.6111 1.35018 13.8484 2.07941 14.842 3.05584C14.3479 3.81892 14.2891 4.82521 14.7748 5.66652C15.2609 6.50846 16.1628 6.96069 17.0714 6.91359C17.2432 7.58033 17.3346 8.27942 17.3346 8.99983C17.3346 9.72025 17.2432 10.4193 17.0714 11.0861C16.1628 11.039 15.2609 11.4912 14.7748 12.3332C14.2891 13.1745 14.3479 14.1807 14.842 14.9438C13.8484 15.9202 12.6111 16.6495 11.2296 17.0319C10.8161 16.2215 9.97355 15.6665 9.0013 15.6665C8.02905 15.6665 7.18647 16.2215 6.77299 17.0319C5.39157 16.6495 4.15425 15.9202 3.16064 14.9438C3.65469 14.1807 3.71353 13.1745 3.2278 12.3332C2.7417 11.4912 1.83982 11.039 0.93126 11.0861C0.759385 10.4193 0.667969 9.72025 0.667969 8.99983ZM4.67118 11.4998C5.19626 12.4093 5.34679 13.4549 5.14145 14.4363C5.48128 14.6782 5.84301 14.8877 6.22204 15.0617C6.96944 14.3927 7.95064 13.9998 9.0013 13.9998C10.052 13.9998 11.0331 14.3927 11.7806 15.0617C12.1596 14.8877 12.5213 14.6782 12.8611 14.4363C12.6558 13.4549 12.8063 12.4093 13.3315 11.4998C13.8565 10.5904 14.6867 9.93733 15.6392 9.62442C15.6583 9.41792 15.668 9.20967 15.668 8.99983C15.668 8.79008 15.6583 8.58175 15.6392 8.37533C14.6867 8.06242 13.8565 7.40933 13.3315 6.49985C12.8063 5.59037 12.6558 4.54482 12.8611 3.56337C12.5213 3.32157 12.1596 3.11206 11.7806 2.93793C11.0331 3.60703 10.052 3.99985 9.0013 3.99985C7.95064 3.99985 6.96944 3.60703 6.22204 2.93793C5.84301 3.11206 5.48128 3.32157 5.14145 3.56337C5.34679 4.54482 5.19626 5.59037 4.67118 6.49985C4.1461 7.40933 3.31592 8.06242 2.36339 8.37533C2.34428 8.58175 2.33464 8.79008 2.33464 8.99983C2.33464 9.20967 2.34428 9.41792 2.36339 9.62442C3.31592 9.93733 4.1461 10.5904 4.67118 11.4998ZM9.0013 11.4998C7.62055 11.4998 6.5013 10.3806 6.5013 8.99983C6.5013 7.61916 7.62055 6.49985 9.0013 6.49985C10.3821 6.49985 11.5013 7.61916 11.5013 8.99983C11.5013 10.3806 10.3821 11.4998 9.0013 11.4998ZM9.0013 9.83317C9.46155 9.83317 9.83464 9.46008 9.83464 8.99983C9.83464 8.53958 9.46155 8.1665 9.0013 8.1665C8.54105 8.1665 8.16797 8.53958 8.16797 8.99983C8.16797 9.46008 8.54105 9.83317 9.0013 9.83317Z" fill="#515151"/>
         </svg>
       ), route: '/api' },
-      { name: "Roles & Permissions", icon: (
+      { name: "Transfer List", icon: (
         <svg width="16" height="19" viewBox="0 0 16 19" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13 6.66683H14.6667C15.1269 6.66683 15.5 7.03993 15.5 7.50016V17.5002C15.5 17.9604 15.1269 18.3335 14.6667 18.3335H1.33333C0.8731 18.3335 0.5 17.9604 0.5 17.5002V7.50016C0.5 7.03993 0.8731 6.66683 1.33333 6.66683H3V5.8335C3 3.07207 5.23857 0.833496 8 0.833496C10.7614 0.833496 13 3.07207 13 5.8335V6.66683ZM2.16667 8.3335V16.6668H13.8333V8.3335H2.16667ZM7.16667 11.6668H8.83333V13.3335H7.16667V11.6668ZM3.83333 11.6668H5.5V13.3335H3.83333V11.6668ZM10.5 11.6668H12.1667V13.3335H10.5V11.6668ZM11.3333 6.66683V5.8335C11.3333 3.99255 9.84092 2.50016 8 2.50016C6.15905 2.50016 4.66667 3.99255 4.66667 5.8335V6.66683H11.3333Z" fill="#515151"/>
         </svg>
-      ) },
+      ), route: '/transferlist' },
       { name: "Security", icon: (
         <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M8 0.833496L14.8474 2.35515C15.2287 2.43988 15.5 2.77805 15.5 3.16864V11.4909C15.5 13.1627 14.6645 14.7238 13.2735 15.6512L8 19.1668L2.7265 15.6512C1.33551 14.7238 0.5 13.1627 0.5 11.4909V3.16864C0.5 2.77805 0.771275 2.43988 1.15256 2.35515L8 0.833496ZM8 2.54082L2.16667 3.83711V11.4909C2.16667 12.6054 2.72367 13.6462 3.651 14.2644L8 17.1637L12.349 14.2644C13.2763 13.6462 13.8333 12.6054 13.8333 11.4909V3.83711L8 2.54082ZM11.7103 6.85169L12.8888 8.0302L7.5855 13.3335L4.04999 9.79799L5.22851 8.61941L7.58492 10.9759L11.7103 6.85169Z" fill="#515151"/>
@@ -43,42 +43,62 @@ const sidebarLinks = [
   },
 ];
 
-const NewSidebar = () => {
+export default function NewSidebar() {
   const navigate = useNavigate();
   const location = useLocation();
-  return (
-    <aside
-      className="fixed top-[80px] left-0 h-[944px] w-[250px] bg-white p-6 flex flex-col gap-5 shadow-sm z-20"
-      style={{ borderRadius: '0 24px 24px 0' }}
-    >
-      {sidebarLinks.map((section) => (
-  <div key={section.section} className="mb-2">
-    <div className="text-xs font-semibold text-black mb-2 pl-1 text-2xl">
-      {section.section}
-    </div>
-    <nav className="flex flex-col gap-2">
-      {section.links.map((link) => {
-        const isActive = location.pathname === link.route;
-        return (
-          <a
-            key={link.name}
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              navigate(link.route);
-            }}
-            className={`flex items-center gap-3 h-11 rounded-lg transition-colors text-sm font-medium ${isActive ? 'bg-[#F3EDFF] text-[#7C3AED]' : 'text-[#1C1E40] hover:bg-[#F7F7FC]'}`}
-          >
-            <span>{link.icon}</span>
-            {link.name}
-          </a>
-        );
-      })}
-    </nav>
-  </div>
-))}
-    </aside>
-  );
-};
+  // Flatten main links for bottom nav (first 5 links from all sections)
+  const bottomNavLinks = sidebarLinks.flatMap(s => s.links).slice(0, 5);
 
-export default NewSidebar; 
+  return (
+    <>
+      {/* Desktop Sidebar */}
+      <aside
+        className="hidden lg:flex fixed top-[80px] left-0 h-[calc(100vh-80px)] w-[220px] md:w-[250px] bg-white p-4 md:p-6 flex-col gap-5 shadow-sm z-20"
+        style={{ borderRadius: '0 24px 24px 0' }}
+      >
+        {sidebarLinks.map((section) => (
+          <div key={section.section} className="mb-2">
+            <div className="text-xs font-semibold text-black mb-2 pl-1 text-2xl">
+              {section.section}
+            </div>
+            <nav className="flex flex-col gap-2">
+              {section.links.map((link) => {
+                const isActive = location.pathname === link.route;
+                return (
+                  <a
+                    key={link.name}
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      navigate(link.route);
+                    }}
+                    className={`flex items-center gap-3 h-11 rounded-lg transition-colors text-sm font-medium ${isActive ? 'bg-[#F3EDFF] text-[#7C3AED]' : 'text-[#1C1E40] hover:bg-[#F7F7FC]'}`}
+                  >
+                    <span>{link.icon}</span>
+                    {link.name}
+                  </a>
+                );
+              })}
+            </nav>
+          </div>
+        ))}
+      </aside>
+      {/* Mobile Bottom Nav */}
+      <nav className="fixed lg:hidden bottom-0 left-0 w-full bg-white border-t border-gray-200 flex justify-around items-center h-16 z-20 shadow-t">
+        {bottomNavLinks.map((link) => {
+          const isActive = location.pathname === link.route;
+          return (
+            <button
+              key={link.name}
+              className={`flex flex-col items-center justify-center px-2 py-1 text-xs ${isActive ? 'text-[#5E30CC] font-semibold' : 'text-[#1C1E40]'}`}
+              onClick={() => navigate(link.route)}
+            >
+              <span className="w-5 h-5 flex items-center justify-center">{link.icon}</span>
+              <span className="mt-1">{link.name.split(' ')[0]}</span>
+            </button>
+          );
+        })}
+      </nav>
+    </>
+  );
+} 
