@@ -106,11 +106,11 @@ const SharedHosting = () => {
   };
 
   return (
-    <div className="relative min-h-screen w-full bg-[#F7F7FC]" style={{ minWidth: 1440}}>
+    <div className="relative min-h-screen w-full bg-[#F7F7FC]" style={{ minWidth: 320 }}>
       <NewNavbar activeSection="Hostings" />
       <div className="flex">
-        {/* Custom Sidebar */}
-        <div className="fixed top-[80px] left-0 w-[250px] h-[calc(100vh-80px)] z-20 bg-white border-r border-[#EAEAEA] flex flex-col pt-8">
+        {/* Custom Sidebar - Hidden on mobile */}
+        <div className="hidden lg:flex fixed top-[80px] left-0 w-[250px] h-[calc(100vh-80px)] z-20 bg-white border-r border-[#EAEAEA] flex-col pt-8">
           <div className="px-6 pb-4 text-xs text-[#6B7280] font-semibold tracking-wide">Main menu</div>
           <div className="flex flex-col gap-2 px-2">
             {sidebarItems.map((item, idx) => (
@@ -118,44 +118,49 @@ const SharedHosting = () => {
             ))}
           </div>
         </div>
+        
         {/* Main Content - scrollable */}
-        <div className="ml-[250px] h-[calc(100vh-80px)] overflow-y-auto">
-          <main className="bg-[#F9FAFC] rounded-[24px] flex flex-col gap-10 shadow-sm p-8" style={{ minHeight: 1188, maxWidth: 1180 }}>
+        <div className="w-full lg:ml-[250px] h-[calc(100vh-80px)] overflow-y-auto">
+          <main className="bg-[#F9FAFC] rounded-none sm:rounded-[24px] flex flex-col gap-6 lg:gap-10 shadow-sm p-4 sm:p-6 lg:p-8 mx-auto" style={{ minHeight: 1188 }}>
             {/* Heading and Stepper */}
             <div>
-              <h1 className="text-3xl font-bold text-[#1C1E40] mb-2">Hi Kevin, let’s set up your hosting plan!</h1>
-              {/* Stepper */}
-              <div className="flex items-center gap-4 mb-8">
+              <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold text-[#1C1E40] mb-2">Hi Kevin, let's set up your hosting plan!</h1>
+              
+              {/* Stepper - Responsive */}
+              <div className="flex items-center gap-2 sm:gap-4 mb-6 lg:mb-8 overflow-x-auto pb-2">
                 {["Plans", "Billing Cycle", "Domain", "Control Panel", "Server Location", "Configuration"].map((step, idx) => (
                   <React.Fragment key={step}>
-                    <div className={`flex items-center gap-2 ${idx === 0 ? 'text-[#9664E6]' : 'text-[#A3A3A3]'}`}>
-                      <span className={`w-6 h-6 flex items-center justify-center rounded-full border-2 ${idx === 0 ? 'border-[#9664E6] bg-[#F7F3FF]' : 'border-[#EAEAEA] bg-white'} font-semibold`}>{idx + 1}</span>
-                      <span className="font-medium text-base">{step}</span>
+                    <div className={`flex items-center gap-1 sm:gap-2 flex-shrink-0 ${idx === 0 ? 'text-[#9664E6]' : 'text-[#A3A3A3]'}`}>
+                      <span className={`w-5 h-5 sm:w-6 sm:h-6 flex items-center justify-center rounded-full border-2 ${idx === 0 ? 'border-[#9664E6] bg-[#F7F3FF]' : 'border-[#EAEAEA] bg-white'} font-semibold text-xs sm:text-sm`}>{idx + 1}</span>
+                      <span className="font-medium text-xs sm:text-sm lg:text-base whitespace-nowrap">{step}</span>
                     </div>
-                    {idx < 5 && <span className="w-8 h-0.5 bg-[#EAEAEA] rounded-full" />}
+                    {idx < 5 && <span className="w-4 sm:w-8 h-0.5 bg-[#EAEAEA] rounded-full flex-shrink-0" />}
                   </React.Fragment>
                 ))}
               </div>
             </div>
+            
             {/* Hosting Plans */}
-            <div className="bg-white rounded-[16px] p-8 flex flex-col gap-6 mb-4" style={{ width: 1116 }}>
-              <div className="text-xl font-semibold text-[#1C1E40] mb-2">Choose Your Hosting Plan</div>
-              <div className="text-sm text-[#6B7280] mb-6">Select a hosting plan that best suits your website’s needs. All plans include security, reliability, and high-speed performance.</div>
-              <div className="flex flex-row gap-4 w-full">
+            <div className="bg-white rounded-[16px] p-4 sm:p-6 lg:p-8 flex flex-col gap-4 lg:gap-6 mb-4 w-full max-w-none">
+              <div className="text-lg sm:text-xl font-semibold text-[#1C1E40] mb-2">Choose Your Hosting Plan</div>
+              <div className="text-sm text-[#6B7280] mb-4 lg:mb-6">Select a hosting plan that best suits your website's needs. All plans include security, reliability, and high-speed performance.</div>
+              
+              {/* Plans Grid - Responsive */}
+              <div className="flex flex-col sm:flex-row gap-4 w-full">
                 {plans.map((plan, idx) => (
-                  <div key={plan.name} className={`flex flex-col flex-1 rounded-[12px] border ${plan.selected ? 'border-[#9664E6] bg-[#F7F3FF]' : 'border-[#EAEAEA] bg-white'} p-6 gap-2`}>
+                  <div key={plan.name} className={`flex flex-col flex-1 rounded-[12px] border ${plan.selected ? 'border-[#9664E6] bg-[#F7F3FF]' : 'border-[#EAEAEA] bg-white'} p-4 sm:p-6 gap-2`}>
                     <div className="flex items-center gap-2 mb-2">
                       <span>
                         <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <rect x="2" y="2" width="32" height="32" rx="16" fill="#F4EBFF"/>
-                        <rect x="2" y="2" width="32" height="32" rx="16" stroke="#F9F5FF" stroke-width="4"/>
-                        <path d="M11.3359 19.6667L18.0026 23L24.6693 19.6667M18.0026 13L11.3359 16.3333L18.0026 19.6667L24.6693 16.3333L18.0026 13Z" stroke="#7F56D9" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round"/>
+                        <rect x="2" y="2" width="32" height="32" rx="16" stroke="#F9F5FF" strokeWidth="4"/>
+                        <path d="M11.3359 19.6667L18.0026 23L24.6693 19.6667M18.0026 13L11.3359 16.3333L18.0026 19.6667L24.6693 16.3333L18.0026 13Z" stroke="#7F56D9" strokeWidth="1.33333" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                       </span>
                       <span className={`font-semibold text-base ${plan.selected ? 'text-[#9664E6]' : 'text-[#1C1E40]'}`}>{plan.name}</span>
                     </div>
-                    <span className="text-xs text-[#027A48] font-semibold bg-[#ECFDF3]">Unlimited</span>
-                    <span className="text-2xl font-bold text-[#1C1E40] mb-2">{plan.storage}</span>
+                    <span className="text-xs text-[#027A48] font-semibold bg-[#ECFDF3] px-2 py-1 rounded w-fit">Unlimited</span>
+                    <span className="text-xl sm:text-2xl font-bold text-[#1C1E40] mb-2">{plan.storage}</span>
                     <ul className="text-sm text-[#6B7280] mb-4 flex flex-col gap-1">
                         <li className='flex flex-row gap-[8px] items-center'>  
                             <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -176,27 +181,30 @@ const SharedHosting = () => {
                             {plan.panel}
                         </li>
                     </ul>
-                    <button className={`rounded-full px-6 py-2 font-semibold text-base transition ${plan.selected ? 'bg-[#9664E6] text-white' : 'bg-white text-[#9664E6] border border-[#9664E6] hover:bg-[#F7F3FF]'}`}>{plan.btn}</button>
+                    <button className={`rounded-full px-4 sm:px-6 py-2 font-semibold text-sm sm:text-base transition ${plan.selected ? 'bg-[#9664E6] text-white' : 'bg-white text-[#9664E6] border border-[#9664E6] hover:bg-[#F7F3FF]'}`}>{plan.btn}</button>
                   </div>
                 ))}
               </div>
-              <div className="flex items-center justify-between mt-4">
+              
+              {/* Action Buttons - Responsive */}
+              <div className="flex flex-col sm:flex-row items-center justify-between mt-4 gap-4">
                 <button className="text-[#5E30CC] underline font-medium">Cancel</button>
-                <div className="flex gap-4">
-                  <button className="rounded-full px-6 py-2 font-semibold text-[#5E30CC] border border-[#9664E6] bg-white hover:bg-[#F7F3FF]">Save as a Draft</button>
-                  <button className="rounded-full px-6 py-2 font-semibold text-white bg-[#9664E6]">Next</button>
+                <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 w-full sm:w-auto">
+                  <button className="rounded-full px-4 sm:px-6 py-2 font-semibold text-[#5E30CC] border border-[#9664E6] bg-white hover:bg-[#F7F3FF] text-sm sm:text-base w-full sm:w-auto">Save as a Draft</button>
+                  <button className="rounded-full px-4 sm:px-6 py-2 font-semibold text-white bg-[#9664E6] text-sm sm:text-base w-full sm:w-auto">Next</button>
                 </div>
               </div>
             </div>
+            
             {/* FAQ Section */}
-            <div className="bg-white rounded-[16px] p-8 flex flex-col gap-4" style={{ width: 1116, height: 400 }}>
+            <div className="bg-white rounded-[16px] p-4 sm:p-6 lg:p-8 flex flex-col gap-4 w-full max-w-none min-h-[300px] sm:min-h-[400px]">
               <div className="text-lg font-semibold text-[#1C1E40] mb-2">Frequently asked questions</div>
               <div className="text-sm text-[#6B7280] mb-4">Everything you need to know about the product and billing.</div>
               {faqs.map((faq, idx) => (
                 <div key={idx} className="border-b border-[#EAEAEA] pb-4 mb-2">
                   <button className="flex items-center justify-between w-full text-left" onClick={() => handleFaqToggle(idx)}>
-                    <span className="font-semibold text-base text-[#1C1E40]">{faq.q}</span>
-                    <span className="text-[#9664E6] text-2xl font-bold">{faqOpen[idx] ? '-' : '+'}</span>
+                    <span className="font-semibold text-sm sm:text-base text-[#1C1E40] pr-4">{faq.q}</span>
+                    <span className="text-[#9664E6] text-2xl font-bold flex-shrink-0">{faqOpen[idx] ? '-' : '+'}</span>
                   </button>
                   {faqOpen[idx] && faq.a && (
                     <div className="text-sm text-[#6B7280] mt-2">{faq.a}</div>

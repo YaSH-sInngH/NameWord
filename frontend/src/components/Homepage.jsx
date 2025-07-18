@@ -43,7 +43,7 @@ const Homepage = () => {
         <div className="w-[180px] lg:w-full flex flex-col items-center ">
           <h1 className="text-2xl md:text-6xl font-northuraLight text-center mb-8 leading-tight">Looking For The Perfect <br className="hidden md:block" />Domain?</h1>
           <p className="text-center text-sm font-korolevLight mb-8 mx-auto">Nameword is trusted by businesses and brands that value online credibility</p>
-          <div className="flex items-center justify-between w-[100%] lg:w-[500px] h-[51px] lg:h-[69px] bg-white border border-[#E0E0E0] rounded-[50px] pl-[16px] pr-[4px] py-[4px] gap-2 shadow-[0_8px_32px_0_rgba(62,35,158,0.15)] mb-0 lg:mb-6">
+          <div className="flex items-center justify-between lg:w-[500px] relative h-[51px] lg:h-[69px] bg-white border border-[#E0E0E0] rounded-[50px] pl-[16px] pr-[4px] py-[4px] gap-2 shadow-[0_8px_32px_0_rgba(62,35,158,0.15)] mb-0 lg:mb-6">
               {/* Search Icon */}
               <svg className="mr-1" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <circle cx="11" cy="11" r="8" stroke="#B0B0B0" strokeWidth="2"/>
