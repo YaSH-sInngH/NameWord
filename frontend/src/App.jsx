@@ -28,6 +28,8 @@ import SharedHosting from './components/SharedHosting';
 import Mystore from './components/Mystore';
 import Nameservers from './components/Nameservers';
 import DomainOwnership from './components/DomainOwnership';
+import ActivityRecord from './components/ActivityRecord';
+import DomainForwarding from './components/DomainForwarding';
 
 const App = () => {
   return (
@@ -62,6 +64,8 @@ const App = () => {
           <Route path="/mystore" element={<Mystore/>} />
           <Route path="/nameservers" element={<Nameservers/>} />
           <Route path="/ownership" element={<DomainOwnership/>} />
+          <Route path="/activity-record" element={<ActivityRecord />} />
+          <Route path="/domainforwarding" element={<DomainForwarding />} />
         </Routes>
       </main>
     </div>
