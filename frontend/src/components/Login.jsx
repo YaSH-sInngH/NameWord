@@ -161,7 +161,7 @@ const Login = () => {
               </div>
               <div className="flex justify-between items-center mt-2 left-[200px]">         
                 <div className="w-full flex justify-end">
-                  <a href="#" className="text-xs text-[#3E239E] font-medium hover:underline transition-all">Reset password</a>
+                  <a href="#" className="text-xs text-[#3E239E] font-medium hover:underline transition-all" onClick={() => navigate('/resetpassword')}>Reset password</a>
                 </div>
               </div>
             </div>

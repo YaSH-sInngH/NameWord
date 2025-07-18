@@ -157,8 +157,8 @@ const HomeDashboard = () => {
 
         {/* Search Bar Section */}
         <div className="w-full bg-white rounded-[20px] flex flex-col p-6 sm:p-8 mb-8 shadow-sm">
-          <div className="flex items-center gap-3 mb-4 sm:mb-6 bg-[#F7F7FC] rounded-[20px] h-[56px] px-4 sm:px-6">
-            <span className="text-[#A0A0A0] flex items-center justify-center">
+          <div className="flex items-center gap-3 mb-4 sm:mb-6 bg-[#F7F7FC] border rounded-[20px] h-[56px] px-4 sm:px-6">
+            <span className="text-black flex items-center justify-center">
               <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
                 <circle cx="9" cy="9" r="7" stroke="#A0A0A0" strokeWidth="2"/>
                 <path d="M15 15L19 19" stroke="#A0A0A0" strokeWidth="2" strokeLinecap="round"/>
@@ -166,8 +166,8 @@ const HomeDashboard = () => {
             </span>
             <input 
               type="text" 
-              placeholder="Search domain" 
-              className="w-full bg-transparent outline-none text-base text-[#1C1E40] h-[40px]"
+              placeholder="Search" 
+              className="w-full bg-transparent outline-none text-base text-black h-[40px]"
               value={searchValue}
               onChange={handleSearchChange}
             />

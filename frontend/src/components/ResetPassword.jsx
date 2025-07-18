@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import mapBaseImg from "../assets/mapBase.png";
+import { useNavigate } from "react-router-dom";
 
 const ResetPassword = () => {
+  const navigate = useNavigate();
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -14,7 +16,7 @@ const ResetPassword = () => {
       <div className="flex justify-between items-center w-full h-6 mt-6 absolute left-1/2 -translate-x-1/2 top-0 z-20
                       px-4 sm:px-6 lg:px-8 xl:w-[1376px] xl:px-0">
         <span className="text-base font-bold text-[#1C1E40]">Nameword</span>
-        <button className="flex items-center gap-2 text-[#1C1E40] text-base font-medium hover:underline">
+        <button className="flex items-center gap-2 text-[#1C1E40] text-base font-medium hover:underline" onClick={() => navigate('/login')}>
           <svg width="20" height="20" fill="none" viewBox="0 0 20 20">
             <path d="M13 15l-5-5 5-5" stroke="#1C1E40" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
